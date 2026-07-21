@@ -87,7 +87,7 @@ export function Header() {
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         solid
           ? "bg-white/95 backdrop-blur-xl shadow-soft border-b border-neutral-200/60 py-3"
-          : "bg-gradient-to-b from-[#0A2540]/85 to-transparent py-4"
+          : "bg-[#0A2540]/80 backdrop-blur-md border-b border-white/10 py-3"
       )}
     >
       <div className="container-custom">

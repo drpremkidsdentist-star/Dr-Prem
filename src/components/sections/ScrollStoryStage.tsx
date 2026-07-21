@@ -14,6 +14,9 @@ type Chapter = {
   mediaType: "video" | "image";
   src: string;
   poster?: string;
+  /** Tailwind object-position classes — phones crop landscape media hard,
+      so subjects framed off-center need a custom focal point on mobile. */
+  mediaClass?: string;
 };
 
 const chapters: Chapter[] = [
@@ -24,6 +27,7 @@ const chapters: Chapter[] = [
     body: "Gentle pediatric dentistry so children leave smiling — not scared.",
     mediaType: "video",
     src: siteVideos.kid,
+    mediaClass: "object-[68%_50%] md:object-center",
   },
   {
     id: "little-patients",
@@ -32,6 +36,7 @@ const chapters: Chapter[] = [
     body: "A calm, kid-friendly journey from the waiting room to a brighter smile.",
     mediaType: "video",
     src: siteVideos.teen,
+    mediaClass: "object-[75%_50%] md:object-center",
   },
   {
     id: "adult",
@@ -48,6 +53,7 @@ const chapters: Chapter[] = [
     body: "One trusted clinic for the whole family — warm care under one roof in Attur.",
     mediaType: "image",
     src: siteImages.familyFatherDaughter,
+    mediaClass: "object-[70%_50%] md:object-center",
   },
   {
     id: "clinic-family",
@@ -56,6 +62,7 @@ const chapters: Chapter[] = [
     body: "A calm pediatric-friendly room where parents feel involved and kids feel safe.",
     mediaType: "image",
     src: siteImages.doctorPatientFamily,
+    mediaClass: "object-[70%_50%] md:object-center",
   },
   {
     id: "senior",
@@ -64,6 +71,7 @@ const chapters: Chapter[] = [
     body: "Gentle restorative care and implants — dignity, clarity, and lasting comfort.",
     mediaType: "image",
     src: siteImages.senior,
+    mediaClass: "object-[70%_50%] md:object-center",
   },
   {
     id: "microscope",
@@ -189,7 +197,7 @@ export function ScrollStoryStage() {
                   videoRefs.current[index] = el;
                 }}
                 src={ch.src}
-                className="absolute inset-0 h-full w-full min-h-full min-w-full object-cover"
+                className={`absolute inset-0 h-full w-full min-h-full min-w-full object-cover ${ch.mediaClass ?? ""}`}
                 muted
                 loop
                 playsInline
@@ -203,7 +211,7 @@ export function ScrollStoryStage() {
                 src={ch.src}
                 alt=""
                 fill
-                className="object-cover object-center"
+                className={`object-cover ${ch.mediaClass ?? "object-center"}`}
                 sizes="100vw"
                 priority={index === 0}
               />
