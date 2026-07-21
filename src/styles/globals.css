@@ -58,6 +58,14 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
+  /* Clip horizontal overflow from decorative blurs / slide-in animations.
+     Use `clip` (not `hidden`) — hidden creates a scroll container and breaks
+     position:sticky in the scroll story. */
+  html,
+  body {
+    overflow-x: clip;
+  }
+
   /* Do not set height:auto on video — breaks full-bleed absolute/object-cover stages */
   img {
     max-width: 100%;
