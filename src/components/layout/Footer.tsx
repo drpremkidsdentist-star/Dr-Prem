@@ -173,6 +173,22 @@ export function Footer() {
               </Link>
             </div>
           </div>
+          <div className="mt-4 text-center">
+            <p className="text-white/40 text-xs">
+              Built with{" "}
+              <span className="text-red-400">❤️</span>{" "}
+              by{" "}
+              <span className="text-white/60 font-medium">D Pradeep Kumar</span>{" "}
+              <span className="text-white/40">(AuraDigital Services &amp; Solutions)</span>{" "}
+              &middot;{" "}
+              <a
+                href="tel:+919148868413"
+                className="text-white/50 hover:text-accent transition-colors duration-300"
+              >
+                9148868413
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </footer>
