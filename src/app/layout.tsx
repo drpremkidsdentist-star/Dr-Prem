@@ -85,12 +85,12 @@ const faqs = [
   {
     question: "What is microscopic dentistry?",
     answer:
-      "Microscopic dentistry uses advanced surgical microscopes to perform dental procedures with extreme precision. This allows for better visualization, more accurate treatments, and superior patient outcomes.",
+      "Microscopic dentistry uses advanced surgical operating microscopes with up to 30× magnification to perform dental procedures with extreme precision. This allows for better visualization, more accurate treatments, minimal invasiveness, and superior patient outcomes compared to traditional dentistry.",
   },
   {
-    question: "Is microscopic dentistry more expensive?",
+    question: "Is microscopic dentistry more expensive than traditional dentistry?",
     answer:
-      "While microscopic dentistry may have a slightly higher initial cost, it often results in fewer complications, less need for retreatment, and long-term cost savings due to the precision and accuracy of the procedures.",
+      "While microscopic dentistry may have a slightly higher initial cost, it often results in fewer complications, less need for retreatment, and long-term cost savings. The precision of microscopic procedures means better outcomes and fewer follow-up visits.",
   },
   {
     question: "What age should children start visiting the dentist?",
@@ -98,14 +98,29 @@ const faqs = [
       "Children should visit the dentist by their first birthday or within six months of their first tooth appearing. Early dental visits help prevent cavities and establish good oral hygiene habits.",
   },
   {
-    question: "How long does a root canal treatment take?",
+    question: "How long does a root canal treatment take at Dr. Prem Kumar's clinic?",
     answer:
-      "A root canal treatment typically takes 60-90 minutes per visit. With microscopic dentistry, Dr. Prem Kumar can often complete the procedure in a single visit with higher accuracy.",
+      "With microscopic dentistry, most root canal treatments can be completed in 60–90 minutes in a single visit. The precision of the 30× operating microscope allows for faster and more accurate treatment compared to traditional methods.",
   },
   {
     question: "Are dental implants painful?",
     answer:
-      "Dental implant procedures are performed under local anesthesia and are generally well-tolerated. Post-operative discomfort is usually minimal and can be managed with prescribed medication.",
+      "Dental implant procedures are performed under local anesthesia and are generally well-tolerated. Post-operative discomfort is usually minimal and can be managed with prescribed medication. Most patients report the procedure was far more comfortable than expected.",
+  },
+  {
+    question: "Where is Dr. Prem Kumar's dental clinic located?",
+    answer:
+      "Our flagship clinic is located in Attur Layout, Yelahanka, Bangalore – 560064, serving patients from Yelahanka, Hebbal, Doddaballapur, and all of North Bangalore. Call +91 81972 80019 to book.",
+  },
+  {
+    question: "What services does Dr. Prem Kumar's clinic offer?",
+    answer:
+      "We offer comprehensive dental services including microscopic root canal treatment (RCT), dental implants, smile design, pediatric dentistry, cosmetic dentistry, laser dentistry, and preventive care — all performed with advanced microscopic precision.",
+  },
+  {
+    question: "Is laser dentistry safe for children?",
+    answer:
+      "Yes, laser dentistry is safe, minimally invasive, and often preferred for children as it reduces discomfort, bleeding, and healing time compared to traditional dental instruments. Dr. Prem Kumar uses it for pediatric gum treatments and cavity preparation.",
   },
 ];
 
@@ -141,10 +156,16 @@ export default function RootLayout({
 
   return (
     <html
-      lang="en"
+      lang="en-IN"
       className={cn(instrumentSans.variable, fraunces.variable, "font-sans")}
     >
       <head>
+        {/* Geo meta tags — Indian local SEO signals */}
+        <meta name="geo.region" content="IN-KA" />
+        <meta name="geo.placename" content="Bangalore, Karnataka, India" />
+        <meta name="geo.position" content="13.1016;77.5702" />
+        <meta name="ICBM" content="13.1016, 77.5702" />
+        {/* JSON-LD Structured Data */}
         {jsonLdSchemas.map((schema, index) => (
           <Script
             key={index}

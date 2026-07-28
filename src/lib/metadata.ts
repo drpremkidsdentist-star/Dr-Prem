@@ -21,11 +21,11 @@ import {
 export const defaultMetadata: Metadata = {
   metadataBase: new URL("https://www.drpremkumar.in"),
   title: {
-    default: "Dr. Prem Kumar | Microscopic Dentist Bangalore | Premium Dental Care",
-    template: "%s | Dr. Prem Kumar - Bangalore",
+    default: "Dr. Prem Kumar | Microscopic Dentist Attur, Yelahanka, Bangalore",
+    template: "%s | Dr. Prem Kumar – Bangalore",
   },
   description:
-    "Dr. Prem Kumar is Bangalore's most trusted microscopic dentist specializing in microscopic dentistry, pediatric dentistry, root canal treatment, smile design, and dental implants. Experience world-class dental care with advanced technology.",
+    "Dr. Prem Kumar – Bangalore's most trusted microscopic dentist in Attur, Yelahanka. Specialising in 30× microscopic dentistry, pediatric dentistry, root canal treatment, smile design, and dental implants. 4.9★ on Google.",
   keywords: [
     "microscopic dentist Bangalore",
     "Dr. Prem Kumar dentist",
@@ -105,56 +105,64 @@ export const defaultMetadata: Metadata = {
 
 export const pageMetadata = {
   home: {
-    title: "Dr. Prem Kumar | Microscopic Dentist Bangalore",
-    description: "World-class microscopic dentistry in Bangalore. Advanced technology, premium care.",
+    title: "Dr. Prem Kumar | Microscopic Dentist Attur Yelahanka Bangalore",
+    description:
+      "Expert microscopic dentistry, laser dentistry & pediatric care in Attur & Yelahanka, Bangalore. 30× precision dental care with 4.9★ Google rating. Book your appointment today.",
   },
   about: {
     title: "About Dr. Prem Kumar | Microscopic Dentist Bangalore",
-    description: "Learn about Dr. Prem Kumar's qualifications, experience, and commitment to microscopic dentistry.",
+    description:
+      "Meet Dr. Prem Kumar – Bangalore's leading microscopic dentist with advanced training in 30× precision dentistry, pediatric care, and cosmetic dentistry at Attur & Yelahanka.",
   },
   microscopicDentistry: {
-    title: "Microscopic Dentistry Bangalore | Dr. Prem Kumar",
-    description: "Discover the future of dentistry with microscopic dentistry. Precision, accuracy, and superior outcomes.",
+    title: "Microscopic Dentistry in Bangalore | 30× Precision | Dr. Prem Kumar",
+    description:
+      "Discover microscopic dentistry in Bangalore by Dr. Prem Kumar. Advanced 30× surgical microscopes deliver unmatched precision for root canals, restorations & more.",
   },
   technology: {
     title: "Advanced Dental Technology Bangalore | Dr. Prem Kumar",
-    description: "Experience cutting-edge dental technology including operating microscopes, CBCT, and digital imaging.",
+    description:
+      "Experience cutting-edge dental technology including operating microscopes (30×), CBCT, digital imaging, and laser systems at Dr. Prem Kumar's Bangalore clinic.",
   },
   patientJourney: {
-    title: "Patient Journey | Microscopic Dentistry Bangalore",
-    description: "Your journey to a perfect smile with Dr. Prem Kumar. From consultation to transformation.",
+    title: "Patient Journey | Dr. Prem Kumar Dental Clinic Bangalore",
+    description:
+      "From your first consultation to your final smile – explore the complete patient journey at Dr. Prem Kumar's microscopic dentistry clinic in Attur, Yelahanka.",
   },
   smileGallery: {
-    title: "Smile Gallery | Microscopic Dentistry Transformations",
-    description: "View real patient transformations and smile makeovers by Dr. Prem Kumar in Bangalore.",
+    title: "Smile Gallery | Real Transformations | Dr. Prem Kumar Bangalore",
+    description:
+      "View real before-and-after patient smile transformations and makeovers by Dr. Prem Kumar in Bangalore. See what microscopic precision dentistry can achieve.",
   },
   knowledgeCenter: {
-    title: "Knowledge Center | Microscopic Dentistry Insights Bangalore",
-    description: "Expert insights, articles, and educational content about microscopic and pediatric dentistry.",
+    title: "Dental Health Blog & Guides | Dr. Prem Kumar Bangalore",
+    description:
+      "Expert articles, guides and videos on microscopic dentistry, pediatric oral health, root canals, implants, and smile care by Dr. Prem Kumar, Bangalore.",
   },
   awards: {
-    title: "Awards & Recognition | Microscopic Dentist Bangalore",
-    description: "Dr. Prem Kumar's awards, certifications, and recognition in the field of microscopic dentistry.",
+    title: "Awards & Recognition | Dr. Prem Kumar | Microscopic Dentist Bangalore",
+    description:
+      "Dr. Prem Kumar's awards, certifications, and recognition in microscopic dentistry, pediatric care, and advanced dental technology.",
   },
   videos: {
-    title: "Videos | Microscopic Dentist Bangalore",
+    title: "Dental Videos | Treatments Explained | Dr. Prem Kumar Bangalore",
     description:
-      "Watch educational videos, patient testimonials, and procedure demonstrations by Dr. Prem Kumar.",
+      "Watch educational videos, patient testimonials, and procedure demonstrations by Dr. Prem Kumar, Bangalore's leading microscopic dentist.",
   },
   contact: {
-    title: "Contact Us | Microscopic Dentist Bangalore",
+    title: "Contact Dr. Prem Kumar | Dental Clinic Attur Yelahanka Bangalore",
     description:
-      "Get in touch with Dr. Prem Kumar's dental clinic in Bangalore for appointments and inquiries.",
+      "Contact Dr. Prem Kumar's dental clinic in Attur, Yelahanka, Bangalore. Call +91 81972 80019 or book online. Serving Hebbal, Doddaballapur & North Bangalore.",
   },
   locations: {
-    title: "Locations | Microscopic Dentist Bangalore",
+    title: "Clinic Locations | Dr. Prem Kumar Dental Clinic Bangalore",
     description:
-      "Visit Dr. Prem Kumar's dental clinics in Bangalore. Find our locations and book your appointment today.",
+      "Find Dr. Prem Kumar's dental clinics in Attur & Yelahanka, Bangalore. Serving Hebbal, Doddaballapur & North Bangalore. Book your appointment today.",
   },
   bookAppointment: {
-    title: "Book Appointment | Microscopic Dentist Bangalore",
+    title: "Book Appointment | Dr. Prem Kumar Dental Clinic Bangalore",
     description:
-      "Schedule your appointment with Dr. Prem Kumar for premium microscopic dental care in Bangalore.",
+      "Book an appointment with Dr. Prem Kumar for microscopic dental care in Attur, Yelahanka, Bangalore. Same-week slots available. Call +91 81972 80019.",
   },
   aboutDrPremKumar: {
     title: "About Dr. Prem Kumar | Microscopic Dentist Bangalore",
@@ -183,27 +191,29 @@ export const pageMetadata = {
     ],
   },
   microscopicRootCanal: {
-    title: "Microscopic Root Canal Treatment | Dr. Prem Kumar Bangalore",
+    title: "Painless Root Canal Treatment Bangalore | Microscopic RCT | Dr. Prem Kumar",
     description:
-      "Painless microscopic root canal treatment with precision and superior outcomes in Bangalore. Save your natural tooth with advanced technology.",
+      "Single-visit microscopic root canal treatment (RCT) by Dr. Prem Kumar in Bangalore. Advanced 30× microscope technique with less pain & higher success rates. Book now.",
     keywords: [
       "microscopic root canal Bangalore",
-      "painless root canal",
-      "root canal treatment Bangalore",
-      "RCT Bangalore",
+      "painless root canal Bangalore",
+      "root canal treatment Attur Yelahanka",
+      "RCT Bangalore single visit",
       "endodontist Bangalore",
+      "microscopic RCT",
     ],
   },
   dentalImplants: {
-    title: "Dental Implants | Dr. Prem Kumar Bangalore",
+    title: "Dental Implants Yelahanka & Attur Bangalore | Dr. Prem Kumar",
     description:
-      "Advanced dental implants for permanent tooth replacement with microscopic precision in Bangalore. Restore your smile with confidence.",
+      "Permanent, natural-looking dental implants at Dr. Prem Kumar's clinic in Attur, Yelahanka, Bangalore. CBCT-planned with microscopic precision. Serving Hebbal & North Bangalore.",
     keywords: [
       "dental implants Bangalore",
+      "dental implants Yelahanka",
+      "dental implants Attur Bangalore",
       "tooth implant Bangalore",
-      "permanent tooth replacement",
-      "implant dentist Bangalore",
-      "full mouth implants",
+      "permanent tooth replacement Bangalore",
+      "implant dentist North Bangalore",
     ],
   },
   smileDesign: {
@@ -219,15 +229,16 @@ export const pageMetadata = {
     ],
   },
   pediatricDentistry: {
-    title: "Pediatric Dentistry | Dr. Prem Kumar Bangalore",
+    title: "Kids Dentist Attur Yelahanka Bangalore | Pediatric Dentistry | Dr. Prem Kumar",
     description:
-      "Gentle and specialized pediatric dentistry for children in a comfortable, kid-friendly environment in Bangalore. Build lifelong healthy habits.",
+      "Fun, fear-free dental care for children in Attur & Yelahanka, Bangalore. Dr. Prem Kumar specialises in making dental visits stress-free for your little ones. Microscopic early detection.",
     keywords: [
+      "kids dentist Attur Bangalore",
+      "kids dentist Yelahanka",
       "pediatric dentist Bangalore",
-      "children dentist Bangalore",
-      "kids dental care",
-      "child friendly dentist",
-      "family dentist Bangalore",
+      "children dentist Attur Yelahanka",
+      "child friendly dentist Bangalore",
+      "family dentist North Bangalore",
     ],
   },
   cosmeticDentistry: {
@@ -421,15 +432,52 @@ export const pageMetadata = {
       "dr prem kumar media",
     ],
   },
-  locationsYelahanka: {
-    title: "Dr. Prem Kumar Dental Clinic Yelahanka | Bangalore",
+  locationsAttur: {
+    title: "Dentist in Attur Yelahanka Bangalore | Dr. Prem Kumar Dental Clinic",
     description:
-      "Visit Dr. Prem Kumar's dental clinic in Yelahanka, Bangalore for premium microscopic dental care. Book your appointment today.",
+      "Dr. Prem Kumar's flagship dental clinic in Attur Layout, Yelahanka, Bangalore. Microscopic dentistry, kids dental care, implants & more. Book: +91 81972 80019.",
+    keywords: [
+      "dentist in Attur",
+      "dentist Attur Yelahanka Bangalore",
+      "dental clinic Attur",
+      "microscopic dentist Attur",
+      "kids dentist Attur",
+    ],
+  },
+  locationsYelahanka: {
+    title: "Dentist in Yelahanka Bangalore | Dr. Prem Kumar Dental Clinic",
+    description:
+      "Looking for a dentist in Yelahanka? Visit Dr. Prem Kumar's clinic for full dental services including implants, laser & microscopic dentistry. 4.9★ rated.",
     keywords: [
       "dentist Yelahanka",
       "dental clinic Yelahanka Bangalore",
       "microscopic dentist Yelahanka",
-      "Yelahanka dental care",
+      "best dentist Yelahanka New Town",
+      "pediatric dentist Yelahanka",
+    ],
+  },
+  locationsHebbal: {
+    title: "Dentist near Hebbal Bangalore | Dr. Prem Kumar Dental Clinic",
+    description:
+      "Looking for a dentist near Hebbal? Dr. Prem Kumar's Attur–Yelahanka clinic is a short drive from Hebbal. Microscopic RCT, implants, kids dentistry. Book today.",
+    keywords: [
+      "dentist near Hebbal",
+      "dentist Hebbal Bangalore",
+      "pediatric dentist Hebbal",
+      "microscopic dentist near Hebbal",
+      "root canal near Hebbal",
+    ],
+  },
+  locationsDodballapur: {
+    title: "Dentist near Doddaballapur | Dr. Prem Kumar Bangalore",
+    description:
+      "Microscopic dental care for Doddaballapur families. Pediatric dentistry, RCT & implants at Dr. Prem Kumar's Attur–Yelahanka clinic in North Bangalore.",
+    keywords: [
+      "dentist near Doddaballapur",
+      "dentist Dodballapur Bangalore",
+      "pediatric dentist Doddaballapur",
+      "root canal Doddaballapur",
+      "dental clinic near Dodballapur",
     ],
   },
   faq: {

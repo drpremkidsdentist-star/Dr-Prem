@@ -1,15 +1,23 @@
 import { Metadata } from "next";
+import Script from "next/script";
 import Link from "next/link";
 import Image from "next/image";
 import { ChevronRight, ArrowRight } from "lucide-react";
 import { StickyBookingBar } from "@/components/sections/StickyBookingBar";
 import { siteImages } from "@/lib/siteAssets";
+import { CollectionPageSchema, BreadcrumbSchema } from "@/lib/schemas";
 
 export const metadata: Metadata = {
-  title: "Services | Microscopic Dentist Bangalore",
+  title: "All Dental Services in Attur & Yelahanka Bangalore | Dr. Prem Kumar",
   description:
-    "Comprehensive dental services including root canal treatment, dental implants, smile design, pediatric dentistry, cosmetic dentistry, and laser dentistry in Bangalore.",
+    "Comprehensive dental services in Attur & Yelahanka, Bangalore — microscopic root canal, dental implants, smile design, pediatric dentistry, laser dentistry & cosmetic care by Dr. Prem Kumar.",
   alternates: { canonical: "/services" },
+  openGraph: {
+    title: "All Dental Services | Dr. Prem Kumar Bangalore",
+    description:
+      "Microscopic root canal, dental implants, smile design, pediatric dentistry, cosmetic & laser dentistry in Attur, Yelahanka, Bangalore.",
+    url: "https://www.drpremkumar.in/services",
+  },
 };
 
 const services = [
@@ -58,8 +66,35 @@ const services = [
 ];
 
 export default function ServicesPage() {
+  const itemListSchema = CollectionPageSchema({
+    name: "Dental Services – Dr. Prem Kumar Bangalore",
+    description:
+      "Full range of microscopic dental services at Dr. Prem Kumar's clinic in Attur, Yelahanka, Bangalore.",
+    url: "https://www.drpremkumar.in/services",
+    itemListElement: services.map((s) => ({
+      name: s.title,
+      url: `https://www.drpremkumar.in${s.href}`,
+    })),
+  });
+
+  const breadcrumbSchema = BreadcrumbSchema([
+    { name: "Home", href: "/" },
+    { name: "Services", href: "/services" },
+  ]);
+
   return (
-    <main className="min-h-screen pt-20">
+    <>
+      <Script
+        id="schema-services-collection"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+      />
+      <Script
+        id="schema-services-breadcrumb"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <main className="min-h-screen pt-20">
       <section className="bg-white section-padding">
         <div className="container-custom">
           <nav className="flex items-center gap-2 text-sm text-neutral-500 mb-8">
@@ -126,5 +161,6 @@ export default function ServicesPage() {
       </section>
       <StickyBookingBar />
     </main>
+    </>
   );
 }

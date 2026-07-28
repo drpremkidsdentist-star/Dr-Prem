@@ -56,6 +56,24 @@ export const clinicContact = {
       addressCountry: "IN",
       geo: { latitude: 13.1005, longitude: 77.5963 },
     },
+    hebbal: {
+      name: "Hebbal",
+      streetAddress: "Attur Layout, Yelahanka",
+      addressLocality: "Bangalore",
+      addressRegion: "Karnataka",
+      postalCode: "560064",
+      addressCountry: "IN",
+      geo: { latitude: 13.0358, longitude: 77.597 },
+    },
+    dodballapur: {
+      name: "Doddaballapur",
+      streetAddress: "Attur Layout, Yelahanka",
+      addressLocality: "Bangalore",
+      addressRegion: "Karnataka",
+      postalCode: "560064",
+      addressCountry: "IN",
+      geo: { latitude: 13.2927, longitude: 77.5431 },
+    },
   },
 } as const;
 
