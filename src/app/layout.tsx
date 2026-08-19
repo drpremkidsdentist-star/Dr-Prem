@@ -9,7 +9,9 @@ import {
   OrganizationSchema,
   WebSiteSchema,
   FAQSchema,
+  RootEntityGraphSchema,
 } from "@/lib/schemas";
+import { areaServedCities } from "@/lib/serviceAreas";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { SmoothScrollProvider } from "@/components/providers/SmoothScrollProvider";
@@ -52,7 +54,7 @@ export const metadata: Metadata = {
 const clinicData = {
   name: "Dr. Prem Kumar Dental Clinic",
   description:
-    "Premium microscopic dental care in Attur, Yelahanka, Bangalore — serving Hebbal, Doddaballapur, and families across Bengaluru. Pediatric dentistry and microscopic RCT.",
+    "Premium microscopic dental care in Attur, Yelahanka, Bangalore — serving Indiranagar, Whitefield, Koramangala, Hebbal, HSR Layout, Doddaballapur, and families across Bengaluru. Pediatric dentistry and microscopic RCT.",
   image: "https://www.drpremkumar.in/images/dr-prem-kumar.jpg",
   url: "https://www.drpremkumar.in",
   telephone: clinicContact.phoneTel,
@@ -67,14 +69,7 @@ const clinicData = {
   openingHours: ["Mo-Fr 09:00-20:00", "Sa 10:00-18:00", "Su 10:00-14:00"],
   priceRange: "₹₹₹",
   sameAs: [clinicContact.googleMapsUrl],
-  areaServed: [
-    "Attur",
-    "Yelahanka",
-    "Hebbal",
-    "Doddaballapur",
-    "Bangalore",
-    "Bengaluru",
-  ],
+  areaServed: areaServedCities as unknown as string[],
   aggregateRating: {
     ratingValue: clinicContact.googleRating,
     reviewCount: "250",
@@ -110,7 +105,7 @@ const faqs = [
   {
     question: "Where is Dr. Prem Kumar's dental clinic located?",
     answer:
-      "Our flagship clinic is located in Attur Layout, Yelahanka, Bangalore – 560064, serving patients from Yelahanka, Hebbal, Doddaballapur, and all of North Bangalore. Call +91 81972 80019 to book.",
+      "Our flagship clinic is located in Attur Layout, Yelahanka, Bangalore – 560064, serving patients from Yelahanka, Hebbal, Doddaballapur, Indiranagar, Whitefield, Koramangala, and all of Bangalore. Call +91 81972 80019 to book.",
   },
   {
     question: "What services does Dr. Prem Kumar's clinic offer?",
@@ -130,6 +125,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const jsonLdSchemas = [
+    RootEntityGraphSchema(areaServedCities),
     DentistSchema(clinicData),
     MedicalBusinessSchema(clinicData),
     OrganizationSchema({
