@@ -2,10 +2,22 @@ import { Metadata } from "next";
 import { ServicePage, ServicePageData } from "@/components/sections/ServicePage";
 
 export const metadata: Metadata = {
-  title: "Cosmetic Dentistry Bangalore | Veneers, Whitening & Bonding Dr. Prem Kumar",
+  title: "Cosmetic Dentist Bangalore | Teeth Whitening & Veneers | Dr. Prem Kumar R",
   description:
-    "Cosmetic dentistry in Bangalore by Dr. Prem Kumar. Enhance your smile with veneers, teeth whitening, and bonding for a brighter, more confident you.",
+    "Expert cosmetic dentistry in Bangalore by Dr. Prem Kumar R. Professional teeth whitening, laser bleaching, porcelain & composite veneers, and dental bonding with 4.9★ results.",
   keywords: [
+    "cosmetic dentist near me",
+    "best cosmetic dentist near me",
+    "cosmetic dentistry near me",
+    "professional teeth whitening near me",
+    "teeth bleaching near me",
+    "laser teeth whitening near me",
+    "porcelain veneers near me",
+    "composite veneers near me",
+    "affordable veneers near me",
+    "snap on veneers near me",
+    "teeth bonding near me",
+    "dental bonding near me",
     "cosmetic dentistry Bangalore",
     "teeth whitening Bangalore",
     "dental veneers Bangalore",
@@ -14,10 +26,10 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     type: "website",
-    title: "Cosmetic Dentistry Bangalore | Dr. Prem Kumar",
-    description: "Enhance your smile with veneers, whitening, and bonding.",
+    title: "Cosmetic Dentist Bangalore | Teeth Whitening & Veneers | Dr. Prem Kumar R",
+    description: "Enhance your smile with veneers, whitening, and bonding in Bangalore.",
     url: "https://www.drpremkumar.in/services/cosmetic-dentistry",
-    images: [{ url: "/images/og-image.jpg", width: 1200, height: 630, alt: "Cosmetic Dentistry" }],
+    images: [{ url: "/images/og-image.jpg", width: 1200, height: 630, alt: "Cosmetic Dentistry Bangalore" }],
   },
   alternates: { canonical: "/services/cosmetic-dentistry" },
 };
@@ -106,9 +118,9 @@ const data: ServicePageData = {
     },
   ],
   relatedCases: [
-    { title: "Whiten and bond makeover", href: "/smile-gallery" },
-    { title: "Porcelain veneers transformation", href: "/smile-gallery" },
-    { title: "Single-tooth bonding repair", href: "/smile-gallery" },
+    { title: "Smile Design & Makeovers", href: "/services/smile-design" },
+    { title: "Laser Gum Contouring", href: "/services/laser-dentistry" },
+    { title: "Digital CAD/CAM Technology", href: "/technology" },
   ],
   relatedArticles: [
     { title: "Whitening at home vs in-clinic", href: "/knowledge-center" },

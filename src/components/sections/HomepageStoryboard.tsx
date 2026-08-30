@@ -22,8 +22,8 @@ const MicroscopicDentistry = dynamic(() =>
   import("./MicroscopicDentistry").then((m) => m.MicroscopicDentistry)
 );
 const Technology = dynamic(() => import("./Technology").then((m) => m.Technology));
-const SmileGallery = dynamic(() =>
-  import("./SmileGallery").then((m) => m.SmileGallery)
+const EducationMentorship = dynamic(() =>
+  import("./EducationMentorship").then((m) => m.EducationMentorship)
 );
 const Testimonials = dynamic(() =>
   import("./Testimonials").then((m) => m.Testimonials)
@@ -46,8 +46,8 @@ export function HomepageStoryboard() {
       <BeforeAfterSlider />
       <MicroscopicDentistry />
       <Technology />
+      <EducationMentorship />
       <AtturLocationSection />
-      <SmileGallery />
       <Testimonials />
       <InteractiveScheduler />
       <FAQ />

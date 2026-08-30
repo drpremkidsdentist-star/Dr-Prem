@@ -2,22 +2,38 @@ import { Metadata } from "next";
 import { ServicePage, ServicePageData } from "@/components/sections/ServicePage";
 
 export const metadata: Metadata = {
-  title: "Smile Design Bangalore | Digital Smile Makeover Dr. Prem Kumar",
+  title: "Smile Design & Clear Aligners Bangalore | Invisalign & Veneers | Dr. Prem Kumar R",
   description:
-    "Digital smile design in Bangalore by Dr. Prem Kumar. Preview your new smile before treatment with computer-aided planning for predictable, beautiful results.",
+    "Digital smile design, Invisalign clear aligners, and porcelain veneers in Bangalore by Dr. Prem Kumar R. Digital smile preview, affordable clear aligners cost & teeth bonding.",
   keywords: [
     "smile design Bangalore",
+    "invisalign",
+    "invisalign price",
+    "invisible aligners",
+    "clear aligners for teeth",
+    "invisalign dentist near me",
+    "affordable invisalign",
+    "invisalign treatment",
+    "clear aligners cost",
+    "invisalign monthly cost",
+    "cheapest clear aligners",
+    "dentist for braces near me",
+    "invisalign retainers",
+    "porcelain veneers near me",
+    "composite veneers near me",
+    "affordable veneers near me",
+    "snap on veneers near me",
+    "teeth bonding near me",
+    "dental bonding near me",
     "digital smile design Bangalore",
     "smile makeover cost Bangalore",
-    "cosmetic smile design",
-    "veneers Bangalore",
   ],
   openGraph: {
     type: "website",
-    title: "Smile Design Bangalore | Dr. Prem Kumar",
-    description: "Preview and design your dream smile with digital precision.",
+    title: "Smile Design & Clear Aligners Bangalore | Dr. Prem Kumar R",
+    description: "Preview and design your dream smile with digital precision and clear aligners in Bangalore.",
     url: "https://www.drpremkumar.in/services/smile-design",
-    images: [{ url: "/images/og-image.jpg", width: 1200, height: 630, alt: "Smile Design" }],
+    images: [{ url: "/images/og-image.jpg", width: 1200, height: 630, alt: "Smile Design & Aligners Bangalore" }],
   },
   alternates: { canonical: "/services/smile-design" },
 };
@@ -106,9 +122,9 @@ const data: ServicePageData = {
     },
   ],
   relatedCases: [
-    { title: "Hollywood smile makeover", href: "/smile-gallery" },
-    { title: "Veneers for chipped front teeth", href: "/smile-gallery" },
-    { title: "Gummy smile correction", href: "/smile-gallery" },
+    { title: "Cosmetic Dentistry & Veneers", href: "/services/cosmetic-dentistry" },
+    { title: "Laser Gum Contouring", href: "/services/laser-dentistry" },
+    { title: "Digital Technology & CAD/CAM", href: "/technology" },
   ],
   relatedArticles: [
     { title: "Veneers vs bonding: which to choose", href: "/knowledge-center" },

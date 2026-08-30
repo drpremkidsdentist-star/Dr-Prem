@@ -25,13 +25,13 @@ const articleData: Record<string, {
     category: "Microscopic Dentistry",
     date: "2026-07-15",
     readTime: "8 min read",
-    author: "Dr. Prem Kumar",
+    author: "Dr. Prem Kumar R",
     relatedSlug: "/services/microscopic-root-canal",
     relatedTitle: "Microscopic Root Canal Treatment",
     content: [
       {
         heading: "What Is Microscopic Root Canal Treatment?",
-        text: "Microscopic root canal treatment uses advanced surgical operating microscopes that provide up to 30x magnification and superior illumination. This allows Dr. Prem Kumar to see details invisible to the naked eye, enabling more precise diagnoses and treatments with minimal invasiveness.",
+        text: "Microscopic root canal treatment uses advanced surgical operating microscopes that provide high magnification and focused illumination. This allows Dr. Prem Kumar R to see details invisible to the naked eye, enabling more precise diagnoses and treatments with minimal invasiveness.",
       },
       {
         heading: "Why Choose Microscopic Precision?",
@@ -39,7 +39,7 @@ const articleData: Record<string, {
       },
       {
         heading: "The Procedure",
-        text: "During the procedure, Dr. Prem Kumar uses a high-powered microscope to carefully examine the tooth, locate all canals, and remove infected tissue with precision. The enhanced visualization allows for thorough cleaning and sealing of the root canal system in a single visit in most cases.",
+        text: "During the procedure, Dr. Prem Kumar R uses a high-powered operating microscope to carefully examine the tooth, locate all canals, and remove infected tissue with precision. The enhanced visualization allows for thorough cleaning and sealing of the root canal system in a single visit in most cases.",
       },
       {
         heading: "Benefits of Microscopic Root Canal Treatment",

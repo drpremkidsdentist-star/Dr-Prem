@@ -2,22 +2,35 @@ import { Metadata } from "next";
 import { ServicePage, ServicePageData } from "@/components/sections/ServicePage";
 
 export const metadata: Metadata = {
-  title: "Dental Implants Bangalore | Dr. Prem Kumar Microscopic Dentist",
+  title: "Dental Implants Bangalore | Affordable Implants & Teeth Replacement | Dr. Prem Kumar R",
   description:
-    "Permanent tooth replacement with dental implants in Bangalore. Biocompatible titanium implants placed with microscopic precision for natural-looking, long-lasting results.",
+    "Permanent, natural tooth replacement with dental implants in Attur & Yelahanka, Bangalore. CBCT-guided microscopic placement, affordable implant costs, and snap-on dentures by Dr. Prem Kumar R.",
   keywords: [
+    "implants",
+    "dental implants near me",
+    "implants near me",
+    "affordable implants near me",
+    "affordable dental implants near me",
+    "low cost dental implants near me",
+    "cheapest dental implants near me",
+    "dental implants cost near me",
+    "dental transplants",
     "dental implants Bangalore",
+    "dental implants Yelahanka",
     "single tooth implant cost Bangalore",
     "best dental implant specialist Bangalore",
     "microscopic dental implant",
     "permanent tooth replacement Bangalore",
+    "prosthodontist near me",
+    "snap on dentures near me",
+    "family teeth",
   ],
   openGraph: {
     type: "website",
-    title: "Dental Implants Bangalore | Dr. Prem Kumar",
-    description: "Permanent, natural-looking teeth with microscopic implant precision.",
+    title: "Dental Implants Bangalore | Dr. Prem Kumar R",
+    description: "Permanent, natural-looking teeth with microscopic implant precision in Bangalore.",
     url: "https://www.drpremkumar.in/services/dental-implants",
-    images: [{ url: "/images/og-image.jpg", width: 1200, height: 630, alt: "Dental Implants" }],
+    images: [{ url: "/images/og-image.jpg", width: 1200, height: 630, alt: "Dental Implants Bangalore" }],
   },
   alternates: { canonical: "/services/dental-implants" },
 };
@@ -106,9 +119,9 @@ const data: ServicePageData = {
     },
   ],
   relatedCases: [
-    { title: "Full-mouth rehabilitation with implants", href: "/smile-gallery" },
-    { title: "Single missing molar replaced", href: "/smile-gallery" },
-    { title: "Implant-supported bridge case", href: "/smile-gallery" },
+    { title: "Microscopic Root Canal & Tooth Preservation", href: "/services/microscopic-root-canal" },
+    { title: "Digital CBCT & Implant Technology", href: "/technology" },
+    { title: "Cosmetic Restoration & Crowns", href: "/services/cosmetic-dentistry" },
   ],
   relatedArticles: [
     { title: "Implants vs bridges: which is better?", href: "/knowledge-center" },

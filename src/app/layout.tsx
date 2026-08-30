@@ -1,5 +1,4 @@
 import type { Metadata, Viewport } from "next";
-import { Instrument_Sans, Fraunces } from "next/font/google";
 import Script from "next/script";
 import "@/styles/globals.css";
 import { defaultMetadata, pageMetadata } from "@/lib/metadata";
@@ -16,28 +15,12 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { SmoothScrollProvider } from "@/components/providers/SmoothScrollProvider";
 import { Toaster } from "@/components/ui/sonner";
-import { cn } from "@/lib/utils";
 import { clinicContact } from "@/lib/siteAssets";
-
-const instrumentSans = Instrument_Sans({
-  subsets: ["latin"],
-  variable: "--font-sans",
-  display: "swap",
-  weight: ["400", "500", "600", "700"],
-});
-
-const fraunces = Fraunces({
-  subsets: ["latin"],
-  variable: "--font-serif",
-  display: "swap",
-  weight: ["400", "500", "600", "700"],
-});
 
 export const viewport: Viewport = {
   themeColor: "#0A2540",
   width: "device-width",
   initialScale: 1,
-  maximumScale: 5,
   viewportFit: "cover",
 };
 
@@ -52,9 +35,9 @@ export const metadata: Metadata = {
 };
 
 const clinicData = {
-  name: "Dr. Prem Kumar Dental Clinic",
+  name: "Kumar's Microscopic Dental Care | Dr. Prem Kumar R",
   description:
-    "Premium microscopic dental care in Attur, Yelahanka, Bangalore — serving Indiranagar, Whitefield, Koramangala, Hebbal, HSR Layout, Doddaballapur, and families across Bengaluru. Pediatric dentistry and microscopic RCT.",
+    "Specialist pediatric & microscopic dental care in Attur Main Road, Yelahanka New Town, Bangalore. Led by Dr. Prem Kumar R, MDS Pediatric & Preventive Dentistry.",
   image: "https://www.drpremkumar.in/images/dr-prem-kumar.jpg",
   url: "https://www.drpremkumar.in",
   telephone: clinicContact.phoneTel,
@@ -66,7 +49,7 @@ const clinicData = {
     addressCountry: clinicContact.locations.attur.addressCountry,
   },
   geo: clinicContact.locations.attur.geo,
-  openingHours: ["Mo-Fr 09:00-20:00", "Sa 10:00-18:00", "Su 10:00-14:00"],
+  openingHours: ["Mo-Sa 10:00-21:00", "Su 10:00-18:00"],
   priceRange: "₹₹₹",
   sameAs: [clinicContact.googleMapsUrl],
   areaServed: areaServedCities as unknown as string[],
@@ -80,42 +63,42 @@ const faqs = [
   {
     question: "What is microscopic dentistry?",
     answer:
-      "Microscopic dentistry uses advanced surgical operating microscopes with up to 30× magnification to perform dental procedures with extreme precision. This allows for better visualization, more accurate treatments, minimal invasiveness, and superior patient outcomes compared to traditional dentistry.",
+      "Microscopic dentistry uses advanced surgical operating microscopes to perform dental procedures with extreme precision. This allows for high-definition visualization, accurate micro-treatments, minimal invasiveness, and superior patient outcomes compared to traditional naked-eye dentistry.",
   },
   {
     question: "Is microscopic dentistry more expensive than traditional dentistry?",
     answer:
-      "While microscopic dentistry may have a slightly higher initial cost, it often results in fewer complications, less need for retreatment, and long-term cost savings. The precision of microscopic procedures means better outcomes and fewer follow-up visits.",
+      "While microscopic dentistry involves specialized surgical optics, it often results in fewer complications, long-term tooth preservation, and less need for retreatment, providing excellent long-term clinical value.",
   },
   {
     question: "What age should children start visiting the dentist?",
     answer:
-      "Children should visit the dentist by their first birthday or within six months of their first tooth appearing. Early dental visits help prevent cavities and establish good oral hygiene habits.",
+      "Children should visit the dentist by their first birthday or within six months of their first tooth appearing. Dr. Prem Kumar R provides gentle, fear-free pediatric consultations to ensure healthy dental development.",
   },
   {
-    question: "How long does a root canal treatment take at Dr. Prem Kumar's clinic?",
+    question: "How long does a root canal treatment take with Dr. Prem Kumar R?",
     answer:
-      "With microscopic dentistry, most root canal treatments can be completed in 60–90 minutes in a single visit. The precision of the 30× operating microscope allows for faster and more accurate treatment compared to traditional methods.",
+      "With microscopic dentistry, most root canal treatments can be completed smoothly in 60–90 minutes, often in a single visit. The precision of the dental operating microscope allows for accurate canal location and disinfection.",
   },
   {
     question: "Are dental implants painful?",
     answer:
-      "Dental implant procedures are performed under local anesthesia and are generally well-tolerated. Post-operative discomfort is usually minimal and can be managed with prescribed medication. Most patients report the procedure was far more comfortable than expected.",
+      "Dental implant procedures are performed under local anesthesia and are generally well-tolerated. Post-operative discomfort is minimal and manageable with standard care.",
   },
   {
-    question: "Where is Dr. Prem Kumar's dental clinic located?",
+    question: "Where is Dr. Prem Kumar R's dental clinic located?",
     answer:
-      "Our flagship clinic is located in Attur Layout, Yelahanka, Bangalore – 560064, serving patients from Yelahanka, Hebbal, Doddaballapur, Indiranagar, Whitefield, Koramangala, and all of Bangalore. Call +91 81972 80019 to book.",
+      "The clinic is located at No. 12, 1st Floor, Attur Main Road, Yelahanka New Town, Bangalore – 560064, serving patients across North Bangalore and Bengaluru. Call +91 81972 80019 to book.",
   },
   {
-    question: "What services does Dr. Prem Kumar's clinic offer?",
+    question: "What services does Dr. Prem Kumar R offer?",
     answer:
-      "We offer comprehensive dental services including microscopic root canal treatment (RCT), dental implants, smile design, pediatric dentistry, cosmetic dentistry, laser dentistry, and preventive care — all performed with advanced microscopic precision.",
+      "We offer comprehensive dental services including pediatric dentistry, microscopic root canal treatment (RCT), dental implants, cosmetic smile design, laser dentistry, and preventive care — all performed with microscopic precision.",
   },
   {
     question: "Is laser dentistry safe for children?",
     answer:
-      "Yes, laser dentistry is safe, minimally invasive, and often preferred for children as it reduces discomfort, bleeding, and healing time compared to traditional dental instruments. Dr. Prem Kumar uses it for pediatric gum treatments and cavity preparation.",
+      "Yes, soft-tissue laser dentistry is safe, minimally invasive, and often preferred for children as it reduces discomfort, bleeding, and healing time compared to conventional surgical instruments.",
   },
 ];
 
@@ -151,16 +134,14 @@ export default function RootLayout({
   ];
 
   return (
-    <html
-      lang="en-IN"
-      className={cn(instrumentSans.variable, fraunces.variable, "font-sans")}
-    >
+    <html lang="en-IN" className="font-sans">
       <head>
         {/* Geo meta tags — Indian local SEO signals */}
         <meta name="geo.region" content="IN-KA" />
         <meta name="geo.placename" content="Bangalore, Karnataka, India" />
         <meta name="geo.position" content="13.1016;77.5702" />
         <meta name="ICBM" content="13.1016, 77.5702" />
+        <link rel="manifest" href="/manifest.json" />
         {/* JSON-LD Structured Data */}
         {jsonLdSchemas.map((schema, index) => (
           <Script

@@ -16,7 +16,7 @@ import { clinicContact, whatsappUrl } from "@/lib/siteAssets";
 import { LocalBusinessSchema } from "@/lib/schemas";
 
 const services = [
-  "Microscopic Root Canal Treatment (30× Zeiss)",
+  "Microscopic Root Canal Treatment",
   "Specialist Pediatric Dentistry",
   "CBCT-Guided Dental Implants",
   "Digital Smile Design & Veneers",
@@ -28,8 +28,8 @@ export function ServiceAreaView({ area }: { area: ServiceArea }) {
   const isFlagship = area.kind === "flagship";
   const schema = LocalBusinessSchema({
     name: isFlagship
-      ? "Dr. Prem Kumar — Microscopic Dental Care (Attur)"
-      : `Dr. Prem Kumar — Microscopic Dentist serving ${area.name}`,
+      ? "Kumar's Microscopic Dental Care | Dr. Prem Kumar R (Attur)"
+      : `Kumar's Microscopic Dental Care — Dr. Prem Kumar R serving ${area.name}`,
     description: area.description,
     image: "https://www.drpremkumar.in/images/og-image.jpg",
     url: `https://www.drpremkumar.in/locations/${area.slug}`,
@@ -43,15 +43,14 @@ export function ServiceAreaView({ area }: { area: ServiceArea }) {
     },
     geo: clinicContact.locations.attur.geo,
     openingHours: [
-      "Mo-Fr 09:00-20:00",
-      "Sa 10:00-18:00",
-      "Su 10:00-14:00",
+      "Mo-Sa 10:00-21:00",
+      "Su 10:00-18:00",
     ],
     priceRange: "₹₹₹",
     areaServed: [area.localityLabel, "Yelahanka", "Bangalore", "Bengaluru"],
     sameAs: [clinicContact.googleMapsUrl],
     parentOrganization: {
-      name: "Dr. Prem Kumar Microscopic Dental Care",
+      name: "Kumar's Microscopic Dental Care",
       url: "https://www.drpremkumar.in",
     },
   });
@@ -128,12 +127,12 @@ export function ServiceAreaView({ area }: { area: ServiceArea }) {
         <div className="lg:col-span-7 space-y-12">
           <div>
             <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4">
-              Why patients from {area.name} travel to Dr. Prem Kumar
+              Why patients from {area.name} travel to Dr. Prem Kumar R
             </h2>
             <p className="text-neutral-600 leading-relaxed mb-6">
               {isFlagship
-                ? "Our flagship clinic in Attur Layout, Yelahanka is equipped with German Zeiss operating microscopes, low-radiation digital imaging, and specialized pediatric treatment rooms."
-                : `Patients from ${area.name} choose Dr. Prem Kumar because standard dental clinics often lack 30× surgical microscopes required for root canal preservation. Travelling a few minutes via ${area.travelNote ?? "Bangalore express corridors"} gives you specialist care that saves natural teeth.`}
+                ? "Our flagship clinic in Attur Layout, Yelahanka is equipped with surgical operating microscopes, low-radiation digital imaging, and specialized pediatric treatment rooms."
+                : `Patients from ${area.name} choose Dr. Prem Kumar R because standard dental clinics often lack the surgical operating microscopes required for root canal preservation. Travelling a few minutes via ${area.travelNote ?? "Bangalore express corridors"} gives you specialist care that saves natural teeth.`}
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
               {area.landmarks.map((item) => (
@@ -162,19 +161,19 @@ export function ServiceAreaView({ area }: { area: ServiceArea }) {
             </div>
           </div>
 
-          {/* Localized FAQ Accordion for Generative AI & Voice Search */}
+          {/* Localized FAQ Accordion */}
           <div className="rounded-3xl border border-neutral-200 bg-neutral-50/80 p-6 md:p-8">
             <div className="flex items-center gap-2 text-sky-600 font-semibold text-sm mb-2">
               <HelpCircle className="w-4 h-4" />
               Frequently Asked Questions
             </div>
             <h3 className="text-2xl font-bold text-primary mb-6">
-              Local SEO & Clinical FAQs for {area.name}
+              Frequently Asked Questions for {area.name} Patients
             </h3>
             <div className="space-y-4">
               <div className="rounded-2xl bg-white p-5 border border-neutral-200">
                 <h4 className="font-bold text-primary mb-2">
-                  Is Dr. Prem Kumar accessible for patients in {area.name}?
+                  Is Dr. Prem Kumar R accessible for patients in {area.name}?
                 </h4>
                 <p className="text-sm text-neutral-600 leading-relaxed">
                   Yes! Our clinic in Attur Layout, Yelahanka is convenient for {area.name} patients ({area.travelNote ?? "short drive via main arterial roads"}). We reserve priority slots for out-of-neighborhood patients.
@@ -182,10 +181,10 @@ export function ServiceAreaView({ area }: { area: ServiceArea }) {
               </div>
               <div className="rounded-2xl bg-white p-5 border border-neutral-200">
                 <h4 className="font-bold text-primary mb-2">
-                  Why choose 30× microscopic dentistry over general dental clinics?
+                  Why choose microscopic dentistry over general dental clinics?
                 </h4>
                 <p className="text-sm text-neutral-600 leading-relaxed">
-                  Microscopic dentistry magnifies tooth anatomy 30 times, enabling Dr. Prem Kumar to find hidden root canals and micro-fractures missed by the naked eye. This ensures a 98%+ success rate and painless single-visit RCT.
+                  Microscopic dentistry provides high-magnification optical clarity, enabling Dr. Prem Kumar R to find hidden root canals and micro-fractures missed by the naked eye. This ensures high clinical success and gentle single-visit RCT.
                 </p>
               </div>
               <div className="rounded-2xl bg-white p-5 border border-neutral-200">

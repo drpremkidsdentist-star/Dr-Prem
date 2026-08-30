@@ -12,7 +12,7 @@ const patientCategories = [
 
 const availableServices = {
   kids: ["Painless Kids Root Canal", "Preventative Cavity Sealing", "First Tooth Checkup & Alignment"],
-  adult: ["30x Microscopic Root Canal (RCT)", "Digital 3D Dental Implants", "Digital Micro-Smile Design"],
+  adult: ["Microscopic Root Canal (RCT)", "Digital 3D Dental Implants", "Digital Smile Design"],
   family: ["Complete Family Dental Checkup", "Preventative Scaling & Polish", "Laser Gum Rejuvenation"],
 };
 

@@ -31,7 +31,7 @@ export const serviceAreas: ServiceArea[] = [
       "Flagship microscopic dental clinic in Attur Layout, Yelahanka, Bangalore. Pediatric dentistry, microscopic RCT, implants. Book at +91 81972 80019.",
     h1: "Microscopic Dentist in Attur, Yelahanka",
     intro:
-      "Our flagship clinic on Attur Main Road serves families across Attur Layout and Yelahanka New Town with 30× microscopic dentistry.",
+      "Our flagship clinic on Attur Main Road serves families across Attur Layout and Yelahanka New Town with advanced microscopic dentistry.",
     landmarks: [
       "Attur Layout, Yelahanka New Town",
       "Attur Main Road",
@@ -87,7 +87,7 @@ export const serviceAreas: ServiceArea[] = [
       "Looking for a microscopic dentist near Hebbal? Visit Dr. Prem Kumar’s Attur–Yelahanka clinic for kids dentistry, RCT, and implants — short drive from Hebbal.",
     h1: "Microscopic Dentist Near Hebbal, Bangalore",
     intro:
-      "Hebbal and Outer Ring Road families choose our Attur clinic for fear-free kids care and 30× microscopic root canals — convenient from Hebbal Flyover and Esteem Mall side.",
+      "Hebbal and Outer Ring Road families choose our Attur clinic for fear-free kids care and microscopic root canals — convenient from Hebbal Flyover and Esteem Mall side.",
     landmarks: [
       "Hebbal Flyover / ORR access",
       "Near Esteem Mall corridor",
@@ -112,7 +112,7 @@ export const serviceAreas: ServiceArea[] = [
     kind: "serving",
     title: "Dentist near Sahakara Nagar | Microscopic Care | Dr. Prem Kumar",
     description:
-      "Premier dental care for Sahakara Nagar residents. Specialized pediatric dentistry & 30x microscopic root canals by Dr. Prem Kumar in nearby Yelahanka.",
+      "Premier dental care for Sahakara Nagar residents. Specialized pediatric dentistry & microscopic root canals by Dr. Prem Kumar R in nearby Yelahanka.",
     h1: "Microscopic Dentist Near Sahakara Nagar",
     intro:
       "Families in Sahakara Nagar trust Dr. Prem Kumar for advanced precision dentistry, minimal discomfort root canals, and child-friendly dental treatments.",
@@ -199,7 +199,7 @@ export const serviceAreas: ServiceArea[] = [
       "Looking for a microscopic dentist near RT Nagar? Visit Dr. Prem Kumar in nearby Attur–Yelahanka for painless RCT, implants, and kids dental care.",
     h1: "Microscopic Dentist Near RT Nagar, Bangalore",
     intro:
-      "RT Nagar and Ganganagar families visit our Attur clinic for high-magnification 30× microscopic root canals and fear-free pediatric dental care.",
+      "RT Nagar and Ganganagar families visit our Attur clinic for high-magnification microscopic root canals and fear-free pediatric dental care.",
     landmarks: [
       "RT Nagar Main Road",
       "Near Ganganagar & CBI Road",
@@ -246,15 +246,15 @@ export const serviceAreas: ServiceArea[] = [
     travelNote: "25 mins drive via Doddaballapur Highway",
   },
 
-  // —— Central & East Bangalore Hubs ——
+  // —— North Bangalore Hubs ——
   {
     slug: "indiranagar",
     name: "Indiranagar",
-    region: "Central & East",
+    region: "North",
     kind: "serving",
-    title: "Microscopic Dentist for Indiranagar Bangalore | Dr. Prem Kumar",
+    title: "Microscopic Dentist for Indiranagar Bangalore | Dr. Prem Kumar R",
     description:
-      "Indiranagar patients travel to Dr. Prem Kumar for specialized 30x microscopic root canals, kids dentistry, and custom smile design. Rated 4.9★.",
+      "Indiranagar patients travel to Dr. Prem Kumar R for specialized microscopic root canals, kids dentistry, and custom smile design. Rated 4.9★.",
     h1: "Microscopic Dentist for Indiranagar Patients",
     intro:
       "Patients from Indiranagar seeking non-surgical precision root canals and specialist pediatric care travel to Dr. Prem Kumar’s microscopic clinic.",
@@ -275,273 +275,17 @@ export const serviceAreas: ServiceArea[] = [
     localityLabel: "Indiranagar",
     travelNote: "30 mins via ORR / Hebbal express corridor",
   },
-  {
-    slug: "koramangala",
-    name: "Koramangala",
-    region: "Central & East",
-    kind: "serving",
-    title: "Microscopic Dentist for Koramangala Bangalore | Dr. Prem Kumar",
-    description:
-      "Top-tier microscopic dental treatment & pediatric dentistry for Koramangala families. Painless single-visit RCT and smile makeovers with Dr. Prem Kumar.",
-    h1: "Microscopic Dentist Serving Koramangala",
-    intro:
-      "Koramangala residents visit Dr. Prem Kumar for German microscopic precision dentistry when saving complex teeth without extraction is top priority.",
-    landmarks: [
-      "Koramangala 80 Feet Road",
-      "Forum Mall / Hosur Road corridor",
-      "Koramangala 4th Block",
-      "Inner Ring Road route",
-    ],
-    keywords: [
-      "dentist in Koramangala",
-      "best dentist Koramangala",
-      "microscopic RCT Koramangala",
-      "pediatric dentist Koramangala",
-      "dental clinic Koramangala Bangalore",
-    ],
-    geo: { latitude: 12.9352, longitude: 77.6245 },
-    localityLabel: "Koramangala",
-    travelNote: "Accessible via ORR / Airport expressway",
-  },
-  {
-    slug: "whitefield",
-    name: "Whitefield",
-    region: "Central & East",
-    kind: "serving",
-    title: "Microscopic Dentist for Whitefield Bangalore | Dr. Prem Kumar",
-    description:
-      "Whitefield IT professionals and families travel to Dr. Prem Kumar for 30x microscopic root canals, kids dental care & implants. Book appointment online.",
-    h1: "Microscopic Dentist Serving Whitefield, Bangalore",
-    intro:
-      "Serving Whitefield and ITPL tech families with microscopic precision, digital smile designing, and child-friendly preventative oral care.",
-    landmarks: [
-      "ITPL / International Tech Park",
-      "Whitefield Main Road",
-      "Hope Farm Junction",
-      "Hoodi & Phoenix Marketcity corridor",
-    ],
-    keywords: [
-      "dentist in Whitefield",
-      "best dentist Whitefield Bangalore",
-      "microscopic root canal Whitefield",
-      "pediatric dentist Whitefield",
-      "dental implants Whitefield",
-    ],
-    geo: { latitude: 12.9698, longitude: 77.7499 },
-    localityLabel: "Whitefield",
-    travelNote: "Direct connectivity via ORR north stretch",
-  },
-  {
-    slug: "marathahalli",
-    name: "Marathahalli",
-    region: "Central & East",
-    kind: "serving",
-    title: "Microscopic Dentist Near Marathahalli | Dr. Prem Kumar Bangalore",
-    description:
-      "Looking for a microscopic root canal specialist or kids dentist near Marathahalli? Dr. Prem Kumar offers advanced 30x microscope dental care.",
-    h1: "Microscopic Dentist Serving Marathahalli",
-    intro:
-      "Marathahalli and ORR belt residents trust Dr. Prem Kumar for gentle pediatric dental care and microscopic re-treatment of complex root canals.",
-    landmarks: [
-      "Marathahalli Bridge & ORR",
-      "Kalamandir Junction",
-      "Old Airport Road Intersection",
-      "Belandur / Kundalahalli access",
-    ],
-    keywords: [
-      "dentist in Marathahalli",
-      "best dentist Marathahalli",
-      "root canal specialist Marathahalli",
-      "kids dentist Marathahalli",
-      "dental clinic near Marathahalli",
-    ],
-    geo: { latitude: 12.9591, longitude: 77.6974 },
-    localityLabel: "Marathahalli",
-    travelNote: "Easy access via Outer Ring Road corridor",
-  },
-
-  // —— South & West Bangalore Hubs ——
-  {
-    slug: "hsr-layout",
-    name: "HSR Layout",
-    region: "South & West",
-    kind: "serving",
-    title: "Microscopic Dentist for HSR Layout Bangalore | Dr. Prem Kumar",
-    description:
-      "HSR Layout families travel for Dr. Prem Kumar’s specialized microscopic dentistry, painless RCT, pediatric oral care, and dental implants.",
-    h1: "Microscopic Dentist Serving HSR Layout",
-    intro:
-      "HSR Layout residents seeking 30x magnification microscopic root canal therapy and stress-free kids dentistry visit Dr. Prem Kumar in Bangalore.",
-    landmarks: [
-      "HSR Layout 27th Main",
-      "Agara Lake Junction",
-      "HSR Sector 1 & Sector 7",
-      "Outer Ring Road Express access",
-    ],
-    keywords: [
-      "dentist in HSR Layout",
-      "best dentist HSR Layout",
-      "pediatric dentist HSR Layout",
-      "microscopic root canal HSR Layout",
-      "dental clinic HSR Layout Bangalore",
-    ],
-    geo: { latitude: 12.9121, longitude: 77.6445 },
-    localityLabel: "HSR Layout",
-    travelNote: "Direct route via Outer Ring Road",
-  },
-  {
-    slug: "jayanagar",
-    name: "Jayanagar",
-    region: "South & West",
-    kind: "serving",
-    title: "Microscopic Dentist for Jayanagar Bangalore | Dr. Prem Kumar",
-    description:
-      "Jayanagar residents consult Dr. Prem Kumar for high-precision 30x microscopic root canals, kids dentistry, and cosmetic smile makeovers.",
-    h1: "Microscopic Dentist Serving Jayanagar",
-    intro:
-      "Known across South Bangalore, Jayanagar patients visit Dr. Prem Kumar for microscopic endodontics and expert pediatric dental care.",
-    landmarks: [
-      "Jayanagar 4th Block Complex",
-      "South End Circle",
-      "Jayanagar 9th Block",
-      "Ashoka Pillar Corridor",
-    ],
-    keywords: [
-      "dentist in Jayanagar",
-      "best dentist Jayanagar",
-      "microscopic dentist Jayanagar",
-      "pediatric dentist Jayanagar Bangalore",
-      "root canal specialist Jayanagar",
-    ],
-    geo: { latitude: 12.925, longitude: 77.5938 },
-    localityLabel: "Jayanagar",
-    travelNote: "30 mins drive via Hebbal expressway",
-  },
-  {
-    slug: "jp-nagar",
-    name: "JP Nagar",
-    region: "South & West",
-    kind: "serving",
-    title: "Microscopic Dentist for JP Nagar Bangalore | Dr. Prem Kumar",
-    description:
-      "Premier microscopic dentistry and pediatric care for JP Nagar families. Specialist root canals, CBCT implants, and smile design by Dr. Prem Kumar.",
-    h1: "Microscopic Dentist Serving JP Nagar",
-    intro:
-      "JP Nagar patients seek Dr. Prem Kumar’s specialized microscopic care to preserve natural teeth with maximum precision.",
-    landmarks: [
-      "JP Nagar 2nd Phase & 6th Phase",
-      "Sarakki Signal",
-      "Delmia Circle",
-      "Bannerghatta Road Intersection",
-    ],
-    keywords: [
-      "dentist JP Nagar",
-      "best dentist JP Nagar Bangalore",
-      "pediatric dentist JP Nagar",
-      "root canal JP Nagar",
-      "dental clinic JP Nagar",
-    ],
-    geo: { latitude: 12.9077, longitude: 77.5854 },
-    localityLabel: "JP Nagar",
-    travelNote: "Accessible via ORR & central flyover corridor",
-  },
-  {
-    slug: "electronic-city",
-    name: "Electronic City",
-    region: "South & West",
-    kind: "serving",
-    title: "Microscopic Dentist for Electronic City Bangalore | Dr. Prem Kumar",
-    description:
-      "Electronic City tech professionals choose Dr. Prem Kumar for advanced 30x microscopic root canal treatment, dental implants, and pediatric care.",
-    h1: "Microscopic Dentist Serving Electronic City",
-    intro:
-      "Serving Electronic City Phase 1 & Phase 2 IT employees with state-of-the-art microscopic dentistry and painless tooth restoration.",
-    landmarks: [
-      "Electronic City Phase 1 Toll Gate",
-      "Electronic City Phase 2",
-      "Nice Road Junction",
-      "Hosur Road Elevated Expressway",
-    ],
-    keywords: [
-      "dentist Electronic City",
-      "best dentist Electronic City Bangalore",
-      "root canal Electronic City",
-      "pediatric dentist Electronic City",
-      "dental clinic near Electronic City",
-    ],
-    geo: { latitude: 12.8452, longitude: 77.6602 },
-    localityLabel: "Electronic City",
-    travelNote: "Direct route via Elevated Expressway & ORR",
-  },
-  {
-    slug: "malleshwaram",
-    name: "Malleshwaram",
-    region: "South & West",
-    kind: "serving",
-    title: "Microscopic Dentist for Malleshwaram Bangalore | Dr. Prem Kumar",
-    description:
-      "Malleshwaram families consult Dr. Prem Kumar for specialist 30x microscopic dentistry, child-friendly pediatric care, and natural smile redesign.",
-    h1: "Microscopic Dentist Serving Malleshwaram",
-    intro:
-      "Malleshwaram patients visit Dr. Prem Kumar for world-class microscopic root canals and preventative pediatric dental protocols.",
-    landmarks: [
-      "Sampige Road Malleshwaram",
-      "Margosa Road",
-      "Mantri Square Corridor",
-      "Yeshwanthpur Junction Connect",
-    ],
-    keywords: [
-      "dentist Malleshwaram",
-      "best dentist Malleshwaram Bangalore",
-      "pediatric dentist Malleshwaram",
-      "microscopic root canal Malleshwaram",
-      "dental clinic Malleshwaram",
-    ],
-    geo: { latitude: 13.0031, longitude: 77.5643 },
-    localityLabel: "Malleshwaram",
-    travelNote: "15-20 mins via Yeshwanthpur / Yelahanka main artery",
-  },
-  {
-    slug: "rajajinagar",
-    name: "Rajajinagar",
-    region: "South & West",
-    kind: "serving",
-    title: "Microscopic Dentist for Rajajinagar Bangalore | Dr. Prem Kumar",
-    description:
-      "Rajajinagar residents visit Dr. Prem Kumar for microscopic root canals, kids dental care, and dental implants in Bangalore.",
-    h1: "Microscopic Dentist Serving Rajajinagar",
-    intro:
-      "Providing Rajajinagar families with German microscopic dental care, painless single-visit root canals, and child-centric gentle dentistry.",
-    landmarks: [
-      "Rajajinagar 1st Block to 6th Block",
-      "Orion Mall / Brigade Gateway",
-      "Navrang Theatre Signal",
-      "Isckon Temple Area",
-    ],
-    keywords: [
-      "dentist Rajajinagar",
-      "best dentist Rajajinagar Bangalore",
-      "pediatric dentist Rajajinagar",
-      "root canal Rajajinagar",
-      "dental clinic Rajajinagar",
-    ],
-    geo: { latitude: 12.9882, longitude: 77.5549 },
-    localityLabel: "Rajajinagar",
-    travelNote: "18-22 mins drive via North Bangalore express artery",
-  },
 ];
 
 export const bangaloreHubKeywords = [
   "microscopic dentist Bangalore",
-  "best dentist in Bangalore",
-  "pediatric dentist Bangalore",
-  "root canal treatment Bangalore",
+  "best dentist in North Bangalore",
+  "pediatric dentist Yelahanka",
+  "root canal treatment Attur",
   "dental clinic North Bangalore",
   "dentist Yelahanka Bangalore",
-  "best dentist Indiranagar",
-  "dentist Koramangala",
-  "dentist Whitefield Bangalore",
-  "dentist HSR Layout",
+  "dentist Hebbal Bangalore",
+  "dentist Sahakara Nagar",
   "microscopic root canal Bangalore",
   "kids dentist Bangalore",
 ];
@@ -559,17 +303,7 @@ export const areaServedCities = [
   "Devanahalli",
   "RT Nagar",
   "Doddaballapur",
-  "Indiranagar",
-  "Koramangala",
-  "Whitefield",
-  "Marathahalli",
-  "HSR Layout",
-  "Jayanagar",
-  "JP Nagar",
-  "Electronic City",
-  "Malleshwaram",
-  "Rajajinagar",
+  "North Bangalore",
   "Bangalore",
-  "Bengaluru",
 ] as const;
 

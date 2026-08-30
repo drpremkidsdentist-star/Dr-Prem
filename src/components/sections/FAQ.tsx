@@ -8,13 +8,13 @@ const faqs = [
   {
     question: "What is microscopic dentistry?",
     answer:
-      "Microscopic dentistry uses advanced surgical operating microscopes that provide up to 30x magnification and superior illumination. This allows dentists to see details invisible to the naked eye, enabling more precise diagnoses and treatments with minimal invasiveness.",
+      "Microscopic dentistry uses advanced surgical operating microscopes with high magnification and focused illumination. This allows dentists to see micro-structures invisible to the naked eye, enabling more precise diagnoses and treatments with minimal invasiveness.",
     category: "General",
   },
   {
     question: "Is microscopic dentistry more expensive than traditional dentistry?",
     answer:
-      "While microscopic dentistry may have a slightly higher initial cost, it often results in fewer complications, reduced need for retreatment, and long-term cost savings. The precision of microscopic procedures means better outcomes and fewer follow-up visits.",
+      "While microscopic dentistry involves specialized surgical optics, it often results in fewer complications, reduced need for retreatment, and long-term tooth preservation, providing excellent long-term clinical value.",
     category: "General",
   },
   {
@@ -26,25 +26,25 @@ const faqs = [
   {
     question: "How long does a root canal treatment take?",
     answer:
-      "With microscopic dentistry, most root canal treatments can be completed in 60-90 minutes in a single visit. The precision of the microscope often allows for faster and more accurate treatment compared to traditional methods.",
+      "With microscopic dentistry, most root canal treatments can be completed smoothly in 60–90 minutes in a single visit. The precision of the operating microscope allows for accurate canal location and thorough disinfection.",
     category: "Procedures",
   },
   {
     question: "Are dental implants painful?",
     answer:
-      "Dental implant procedures are performed under local anesthesia and are generally well-tolerated. Post-operative discomfort is usually minimal and can be managed with prescribed medication. Most patients report that the procedure was much more comfortable than expected.",
+      "Dental implant procedures are performed under local anesthesia and are generally well-tolerated. Post-operative discomfort is usually minimal and manageable with standard care. Most patients report that the procedure was much more comfortable than expected.",
     category: "Procedures",
   },
   {
     question: "What is the recovery time for dental implants?",
     answer:
-      "Initial healing typically takes 1-2 weeks, with complete osseointegration (fusion with the jawbone) taking 3-6 months. With microscopic precision, healing is often faster and more predictable.",
+      "Initial healing typically takes 1–2 weeks, with complete osseointegration (fusion with the jawbone) taking 3–6 months. With microscopic precision, healing is predictable and gentle.",
     category: "Procedures",
   },
   {
     question: "How long do dental implants last?",
     answer:
-      "With proper care and maintenance, dental implants can last a lifetime. The implant itself is made of biocompatible titanium that fuses with the jawbone, while the crown typically lasts 10-15 years before needing replacement.",
+      "With proper care and maintenance, dental implants can last a lifetime. The implant itself is made of biocompatible titanium that fuses with the jawbone, while the crown typically lasts 10–15 years before needing replacement.",
     category: "Procedures",
   },
   {
@@ -56,7 +56,7 @@ const faqs = [
   {
     question: "Do you treat children?",
     answer:
-      "Yes, we specialize in pediatric dentistry with a child-friendly approach. Our clinic is designed to make children feel comfortable, and Dr. Prem Kumar is experienced in making dental visits positive experiences for kids.",
+      "Yes, we specialize in pediatric dentistry with a child-friendly approach. Our clinic is designed to make children feel comfortable, and Dr. Prem Kumar R (MDS Pediatric & Preventive Dentistry) is experienced in gentle behavior guidance.",
     category: "Pediatric",
   },
   {

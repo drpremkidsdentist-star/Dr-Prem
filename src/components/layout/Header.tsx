@@ -19,10 +19,9 @@ import { cn } from "@/lib/utils";
 const desktopNavLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
-  { href: "/microscopic-dentistry", label: "Microscopic" },
   { href: "/technology", label: "Technology" },
   { href: "/services", label: "Services" },
-  { href: "/smile-gallery", label: "Gallery" },
+  { href: "/education", label: "Education & Mentorship" },
   { href: "/locations", label: "Locations" },
 ];
 
@@ -32,32 +31,31 @@ const mobileNavGroups = [
     links: [
       { href: "/", label: "Home" },
       { href: "/about", label: "About" },
-      { href: "/about/dr-prem-kumar", label: "Dr. Prem Kumar" },
-      { href: "/microscopic-dentistry", label: "Microscopic Dentistry" },
-      { href: "/services", label: "Services" },
-      { href: "/technology", label: "Technology" },
+      { href: "/about/dr-prem-kumar", label: "Dr. Prem Kumar R" },
+      { href: "/technology", label: "Technology & Microscope" },
+      { href: "/services", label: "Specialist Services" },
+      { href: "/education", label: "Education & Mentorship" },
     ],
   },
   {
-    label: "Patients",
+    label: "Patients & Academy",
     links: [
+      { href: "/education", label: "Doctors Clinical Mentorship" },
       { href: "/patient-journey", label: "Patient Journey" },
-      { href: "/smile-gallery", label: "Smile Gallery" },
-      { href: "/cases", label: "Real Cases" },
       { href: "/knowledge-center", label: "Knowledge Center" },
-      { href: "/testimonials", label: "Testimonials" },
+      { href: "/testimonials", label: "Patient Reviews" },
       { href: "/faq", label: "FAQ" },
     ],
   },
   {
     label: "Visit",
     links: [
-      { href: "/locations", label: "All Locations" },
-      { href: "/locations/attur", label: "Attur Clinic" },
+      { href: "/locations", label: "All North Bangalore Hubs" },
+      { href: "/locations/attur", label: "Attur Flagship Clinic" },
       { href: "/locations/yelahanka", label: "Yelahanka" },
       { href: "/locations/hebbal", label: "Hebbal" },
-      { href: "/locations/dodballapur", label: "Doddaballapur" },
-      { href: "/contact", label: "Contact" },
+      { href: "/locations/sahakara-nagar", label: "Sahakara Nagar" },
+      { href: "/contact", label: "Contact Us" },
     ],
   },
 ];
@@ -96,7 +94,7 @@ export function Header() {
             <div className="relative size-9 md:size-10 rounded-full overflow-hidden border-2 border-sky-400/80 shadow-sm shrink-0">
               <Image
                 src="/images/dr-prem-portrait.png"
-                alt="Dr. Prem Kumar"
+                alt="Dr. Prem Kumar R, MDS Pediatric & Preventive Dentist"
                 fill
                 className="object-cover"
                 priority
@@ -109,7 +107,7 @@ export function Header() {
                   solid ? "text-primary" : "text-white"
                 )}
               >
-                Dr. Prem Kumar
+                Dr. Prem Kumar R
               </span>
               <span
                 className={cn(
@@ -117,18 +115,18 @@ export function Header() {
                   solid ? "text-accent" : "text-sky-200"
                 )}
               >
-                Microscopic Dentist
+                Pediatric & Microscopic Dentist
               </span>
             </div>
           </Link>
 
-          <nav className="hidden xl:flex items-center gap-0.5" aria-label="Main navigation">
+          <nav className="hidden lg:flex items-center gap-1" aria-label="Main navigation">
             {desktopNavLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 className={cn(
-                  "px-3 py-2 text-sm font-semibold rounded-lg transition-colors",
+                  "px-3 py-2 text-sm font-semibold rounded-lg transition-colors whitespace-nowrap",
                   solid
                     ? "text-neutral-800 hover:text-accent hover:bg-neutral-100"
                     : "text-white hover:bg-white/10"

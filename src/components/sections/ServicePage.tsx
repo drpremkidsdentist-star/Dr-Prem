@@ -54,7 +54,10 @@ export interface ServicePageData {
   procedureFollowup?: string;
 }
 
-function SectionHeading({ eyebrow, title, accent }: { eyebrow: string; title: string; accent: string }) {
+function SectionHeading({ eyebrow, title, accent }: { eyebrow: string; title: string; accent?: string }) {
+  const hasAccent = accent && title.includes(accent);
+  const parts = hasAccent ? title.split(accent) : [title];
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -66,10 +69,16 @@ function SectionHeading({ eyebrow, title, accent }: { eyebrow: string; title: st
       <span className="text-accent font-medium tracking-widest uppercase text-sm mb-4 block">
         {eyebrow}
       </span>
-      <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6 leading-tight">
-        {title.split(accent)[0]}
-        <span className="font-serif italic text-accent">{accent}</span>
-        {title.split(accent)[1]}
+      <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-6 leading-tight">
+        {hasAccent ? (
+          <>
+            {parts[0]}
+            <span className="font-serif italic text-accent">{accent}</span>
+            {parts.slice(1).join(accent)}
+          </>
+        ) : (
+          title
+        )}
       </h2>
     </motion.div>
   );
@@ -190,7 +199,7 @@ export function ServicePage({ data }: { data: ServicePageData }) {
       "@type": "Service",
       name: data.name,
       description: data.directAnswer,
-      provider: { "@type": "Person", name: "Dr. Prem Kumar" },
+      provider: { "@type": "Person", name: "Dr. Prem Kumar R" },
       serviceType: "Dental Service",
       url,
       areaServed: { "@type": "City", name: "Bangalore" },
@@ -236,7 +245,7 @@ export function ServicePage({ data }: { data: ServicePageData }) {
               <Icon className="w-4 h-4 text-accent" />
               {data.heroTagline}
             </div>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight tracking-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 leading-tight tracking-tight">
               {data.name}
             </h1>
             <motion.p
@@ -305,7 +314,7 @@ export function ServicePage({ data }: { data: ServicePageData }) {
       <section className="section-padding bg-white">
         <div className="container-custom grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div>
-            <SectionHeading eyebrow="Overview" title={`Understanding ${data.shortName}`} accent="Treatment" />
+            <SectionHeading eyebrow="Overview" title={`Understanding ${data.shortName}`} accent={data.shortName} />
             <div className="space-y-5">
               {data.expanded.map((para, index) => (
                 <motion.p
@@ -322,7 +331,7 @@ export function ServicePage({ data }: { data: ServicePageData }) {
             </div>
           </div>
           <div>
-            <SectionHeading eyebrow="Why It Matters" title="Why It's Import" accent="ant" />
+            <SectionHeading eyebrow="Why It Matters" title="Why It's Important" accent="Important" />
             <div className="bg-neutral-50 rounded-3xl p-8 border border-neutral-100">
               <ListBlock items={data.whyImportant} icon={HeartPulse} />
             </div>
@@ -333,7 +342,7 @@ export function ServicePage({ data }: { data: ServicePageData }) {
       {/* Benefits */}
       <section className="section-padding bg-neutral-50">
         <div className="container-custom">
-          <SectionHeading eyebrow="Benefits" title="Key Benef" accent="its" />
+          <SectionHeading eyebrow="Benefits" title="Key Benefits" accent="Benefits" />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {data.benefits.map((benefit, index) => (
               <motion.div
@@ -358,13 +367,13 @@ export function ServicePage({ data }: { data: ServicePageData }) {
       <section className="section-padding bg-white">
         <div className="container-custom grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div>
-            <SectionHeading eyebrow="Candidates" title="Who Need" accent="s It" />
+            <SectionHeading eyebrow="Candidates" title="Who Needs It" accent="Needs" />
             <div className="bg-neutral-50 rounded-3xl p-8 border border-neutral-100">
               <ListBlock items={data.whoNeeds} icon={UserCheck} />
             </div>
           </div>
           <div>
-            <SectionHeading eyebrow="Considerations" title="Risks & Precaut" accent="ions" />
+            <SectionHeading eyebrow="Considerations" title="Risks & Precautions" accent="Precautions" />
             <div className="bg-neutral-50 rounded-3xl p-8 border border-neutral-100">
               <ListBlock items={data.risks} icon={ShieldAlert} />
             </div>
@@ -375,7 +384,7 @@ export function ServicePage({ data }: { data: ServicePageData }) {
       {/* Recovery + Cost + Duration */}
       <section className="section-padding bg-neutral-50">
         <div className="container-custom">
-          <SectionHeading eyebrow="What To Expect" title="Recovery, Cost & Durat" accent="ion" />
+          <SectionHeading eyebrow="What To Expect" title="Recovery, Cost & Duration" accent="Duration" />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <InfoCard icon={Clock} title="Procedure Duration" body={data.duration} />
             <InfoCard icon={IndianRupee} title="Cost Range (INR)" body={data.costRange} />
@@ -412,7 +421,7 @@ export function ServicePage({ data }: { data: ServicePageData }) {
               Doctor&apos;s Insight
             </span>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-8 leading-tight">
-              From Dr. Prem Kumar
+              From Dr. Prem Kumar R
             </h2>
             <div className="relative">
               <span className="absolute -top-6 -left-2 text-8xl text-accent/30 font-serif">&ldquo;</span>
@@ -425,20 +434,20 @@ export function ServicePage({ data }: { data: ServicePageData }) {
                 <UserCheck className="w-7 h-7 text-accent" />
               </div>
               <div className="text-left">
-                <p className="text-white font-semibold">Dr. Prem Kumar</p>
-                <p className="text-white/60 text-sm">Microscopic Dentist, Bangalore</p>
+                <p className="text-white font-semibold">Dr. Prem Kumar R</p>
+                <p className="text-white/60 text-sm">MDS Pediatric &amp; Microscopic Dentist, Bangalore</p>
               </div>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Related Cases + Articles */}
+      {/* Related Services + Articles */}
       <section className="section-padding bg-white">
         <div className="container-custom">
-          <SectionHeading eyebrow="Explore More" title="Related Cases & Artic" accent="les" />
+          <SectionHeading eyebrow="Explore More" title="Related Services & Guides" accent="Guides" />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
-            <RelatedLinks title="Related Cases" items={data.relatedCases} />
+            <RelatedLinks title="Related Treatments" items={data.relatedCases} />
             <RelatedLinks title="Related Articles" items={data.relatedArticles} />
           </div>
         </div>
@@ -447,7 +456,7 @@ export function ServicePage({ data }: { data: ServicePageData }) {
       {/* FAQ */}
       <section id="faq" className="section-padding bg-neutral-50">
         <div className="container-custom">
-          <SectionHeading eyebrow="FAQ" title="Frequently Asked Quest" accent="ions" />
+          <SectionHeading eyebrow="FAQ" title="Frequently Asked Questions" accent="Questions" />
           <FaqAccordion faqs={data.faqs} />
         </div>
       </section>

@@ -2,55 +2,56 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Sparkles, Eye, CheckCircle2, Zap, ShieldCheck, ArrowRight, Layers, Award } from "lucide-react";
+import { Sparkles, Eye, CheckCircle2, Zap, ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { siteImages } from "@/lib/siteAssets";
 
 const adultServices = [
   {
     id: "rct",
     title: "Microscopic Root Canal (RCT)",
-    tag: "Single Visit Painless Treatment",
-    desc: "30x surgical magnification identifies hidden canals and micro-anatomy that traditional root canals miss, ensuring 99.4% success and long-term tooth preservation.",
+    tag: "Single Visit Gentle Treatment",
+    desc: "Surgical microscope optics identify hidden canals and micro-anatomy that traditional naked-eye root canals miss, ensuring high clinical success and long-term tooth preservation.",
     benefits: [
-      "Single-visit completion in 60 minutes",
+      "Single-visit completion in 60–90 minutes",
       "Painless micro-anesthesia protocol",
-      "Zero destruction of healthy tooth enamel",
-      "Lifetime tooth retention rate",
+      "Minimal removal of healthy tooth structure",
+      "Long-term natural tooth preservation",
     ],
-    image: "/images/media/video-4.jpg",
+    image: siteImages.services.microscopicRct,
   },
   {
     id: "implants",
-    title: "Microscopic Dental Implants",
-    tag: "3D Guided Surgical Precision",
-    desc: "Computer-guided implant placement aligned under high-power microscope optics for exact angle, position, and zero nerve impingement.",
+    title: "Dental Implants",
+    tag: "3D Guided Precision",
+    desc: "Precision implant planning with high-definition optics for exact placement, stability, and natural aesthetic tooth replacement.",
     benefits: [
-      "Immediate aesthetic loading",
-      "Minimal flapless surgical trauma",
-      "Natural titanium bone integration",
-      "Perio-microscopic gum sculpting",
+      "Natural-looking ceramic crown restoration",
+      "Minimal trauma surgical protocol",
+      "High biocompatible bone integration",
+      "Balanced bite & facial harmony",
     ],
-    image: "/images/media/video-5.jpg",
+    image: siteImages.services.dentalImplants,
   },
   {
     id: "smile",
-    title: "Digital Micro-Smile Design",
+    title: "Digital Smile Design",
     tag: "Porcelain Veneers & Alignment",
-    desc: "Custom ultra-thin ceramic veneers handcrafted to sub-millimeter precision for a natural, luminous aesthetic smile transformation.",
+    desc: "Custom ultra-thin ceramic veneers and aesthetic restorations planned with sub-millimeter precision for a natural, healthy smile.",
     benefits: [
-      "Digital 3D preview before treatment",
-      "Minimal enamel preparation (0.3mm)",
-      "Stain-resistant porcelain ceramics",
-      "Perfect bite & facial harmony",
+      "Digital smile preview before treatment",
+      "Conservative enamel preparation",
+      "Durable, stain-resistant porcelain ceramics",
+      "Natural shade matching & symmetry",
     ],
-    image: "/images/media/video-6.jpg",
+    image: siteImages.services.cosmeticDentistry,
   },
 ];
 
 export function AdultStorySection() {
   const [activeTab, setActiveTab] = useState(0);
-  const [zoomLevel, setZoomLevel] = useState<"1x" | "10x" | "30x">("30x");
+  const [zoomLevel, setZoomLevel] = useState<"1x" | "10x" | "Micro">("Micro");
 
   const active = adultServices[activeTab];
 
@@ -80,9 +81,9 @@ export function AdultStorySection() {
             transition={{ delay: 0.1 }}
             className="text-4xl md:text-6xl font-extrabold tracking-tight mb-4"
           >
-            Adult Restorative Excellence
+            Adult Restorative Care
             <br />
-            <span className="font-serif italic text-accent">30x Microscopic Precision</span>
+            <span className="font-serif italic text-sky-300">Powered by Microscopic Precision</span>
           </motion.h2>
 
           <motion.p
@@ -92,7 +93,7 @@ export function AdultStorySection() {
             transition={{ delay: 0.2 }}
             className="text-base md:text-xl text-neutral-300 max-w-2xl leading-relaxed"
           >
-            Say goodbye to painful dental visits. Microscopic precision allows Dr. Prem Kumar to treat adults with pinpoint accuracy, preserving natural teeth for life.
+            Experience comfortable, precision dentistry. Surgical microscope optics allow Dr. Prem Kumar R to treat adults with pinpoint accuracy, conserving natural tooth structure.
           </motion.p>
         </div>
 
@@ -164,34 +165,34 @@ export function AdultStorySection() {
             </div>
           </div>
 
-          {/* Right Column: Microscopic Magnification Viewer Simulation */}
+          {/* Right Column: Magnification Viewer Simulation */}
           <div className="lg:col-span-5 relative">
-            <div className="relative aspect-square rounded-2xl overflow-hidden border border-white/20 bg-neutral-900 shadow-xl group">
+            <div className="relative aspect-video rounded-2xl overflow-hidden border border-white/20 bg-neutral-900 shadow-xl group">
               <Image
                 src={active.image}
                 alt={active.title}
                 fill
                 className={`object-cover transition-transform duration-700 ${
-                  zoomLevel === "30x" ? "scale-150" : zoomLevel === "10x" ? "scale-125" : "scale-100"
+                  zoomLevel === "Micro" ? "scale-125" : zoomLevel === "10x" ? "scale-110" : "scale-100"
                 }`}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-transparent to-transparent opacity-80" />
+              <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/70 via-transparent to-transparent" />
 
               {/* Magnification Reticle Overlay */}
-              <div className="absolute inset-0 border-2 border-dashed border-sky-400/40 rounded-2xl pointer-events-none m-4 flex items-center justify-center">
+              <div className="absolute inset-0 border border-dashed border-sky-400/40 rounded-2xl pointer-events-none m-3 flex items-center justify-center">
                 <div className="w-16 h-16 border border-sky-400/60 rounded-full flex items-center justify-center">
-                  <div className="w-2 h-2 rounded-full bg-sky-400 animate-ping" />
+                  <div className="w-1.5 h-1.5 rounded-full bg-sky-300" />
                 </div>
               </div>
 
               {/* Zoom Selector Controls */}
-              <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between bg-neutral-900/90 backdrop-blur-md px-4 py-2.5 rounded-xl border border-white/15">
+              <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between bg-neutral-900/90 backdrop-blur-md px-4 py-2 rounded-xl border border-white/15">
                 <div className="flex items-center gap-2">
                   <Eye className="w-4 h-4 text-sky-300" />
-                  <span className="text-xs font-semibold uppercase text-neutral-300">Optics Zoom</span>
+                  <span className="text-xs font-semibold uppercase text-neutral-300">Optics Mode</span>
                 </div>
                 <div className="flex gap-1">
-                  {(["1x", "10x", "30x"] as const).map((lvl) => (
+                  {(["1x", "10x", "Micro"] as const).map((lvl) => (
                     <button
                       key={lvl}
                       onClick={() => setZoomLevel(lvl)}
@@ -201,7 +202,7 @@ export function AdultStorySection() {
                           : "bg-white/10 text-white hover:bg-white/20"
                       }`}
                     >
-                      {lvl}
+                      {lvl === "Micro" ? "Microscope" : lvl}
                     </button>
                   ))}
                 </div>

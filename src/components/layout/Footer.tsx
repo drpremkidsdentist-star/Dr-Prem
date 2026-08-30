@@ -4,21 +4,22 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import { Phone, Mail, MapPin, Clock, Instagram, Youtube, Linkedin, Facebook } from "lucide-react";
+import { clinicContact } from "@/lib/siteAssets";
 
 const footerLinks = {
   services: [
-    { href: "/microscopic-dentistry", label: "Microscopic Dentistry" },
-    { href: "/technology", label: "Advanced Technology" },
+    { href: "/technology", label: "Technology & Microscope" },
+    { href: "/education", label: "Education & Mentorship" },
     { href: "/patient-journey", label: "Patient Journey" },
-    { href: "/smile-gallery", label: "Smile Gallery" },
+    { href: "/locations", label: "North Bangalore Hubs" },
   ],
   quickLinks: [
-    { href: "/about", label: "About Dr. Prem Kumar" },
+    { href: "/about", label: "About Dr. Prem Kumar R" },
+    { href: "/education", label: "Doctors Academy" },
     { href: "/knowledge-center", label: "Knowledge Center" },
     { href: "/testimonials", label: "Testimonials" },
-    { href: "/awards", label: "Awards" },
     { href: "/faq", label: "FAQ" },
-    { href: "/contact", label: "Contact" },
+    { href: "/contact", label: "Contact Us" },
   ],
   treatments: [
     { href: "/services/microscopic-root-canal", label: "Root Canal Treatment" },
@@ -31,10 +32,10 @@ const footerLinks = {
 };
 
 const socialLinks = [
-  { icon: Instagram, href: "#", label: "Instagram" },
-  { icon: Youtube, href: "#", label: "YouTube" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Facebook, href: "#", label: "Facebook" },
+  { icon: Instagram, href: "https://www.instagram.com/kumarsmicroscopicdentalcare", label: "Instagram" },
+  { icon: Youtube, href: "https://www.youtube.com", label: "YouTube" },
+  { icon: Facebook, href: "https://www.facebook.com", label: "Facebook" },
+  { icon: MapPin, href: clinicContact.googleMapsUrl, label: "Google Maps" },
 ];
 
 export function Footer() {
@@ -47,28 +48,30 @@ export function Footer() {
               <div className="relative w-12 h-12">
                 <Image
                   src="/images/dr-prem-logo.png"
-                  alt="Dr. Prem Kumar Logo"
+                  alt="Dr. Prem Kumar R Logo"
                   fill
                   className="object-contain"
                 />
               </div>
               <div className="flex flex-col">
                 <span className="text-xl font-bold text-white">
-                  Dr. Prem Kumar
+                  Dr. Prem Kumar R
                 </span>
                 <span className="text-sm tracking-widest uppercase text-white/60">
-                  Microscopic Dentist
+                  MDS Pediatric &amp; Microscopic Dentist
                 </span>
               </div>
             </Link>
             <p className="text-white/70 text-sm leading-relaxed mb-6 max-w-md">
-              Bangalore&apos;s most trusted microscopic dentist. Experience world-class dental care with advanced technology, precision, and personalized attention.
+              Bangalore&apos;s trusted pediatric &amp; microscopic dental specialist in Attur Main Road, Yelahanka New Town. Combining surgical microscope precision with gentle, fear-free patient care.
             </p>
             <div className="flex items-center gap-4">
               {socialLinks.map((social) => (
                 <a
                   key={social.label}
                   href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label={social.label}
                   className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white/70 hover:bg-accent hover:text-white transition-all duration-300"
                 >
@@ -115,40 +118,39 @@ export function Footer() {
             <ul className="space-y-4">
               <li>
                 <a
-                  href="tel:+918197280019"
+                  href={`tel:${clinicContact.phoneTel}`}
                   className="flex items-start gap-3 text-white/70 hover:text-accent text-sm transition-colors duration-300"
                 >
                   <Phone className="w-5 h-5 mt-0.5 flex-shrink-0 text-accent" />
-                  <span>+91 81972 80019</span>
+                  <span>{clinicContact.phoneDisplay} / {clinicContact.phoneDisplayAlt}</span>
                 </a>
               </li>
               <li>
                 <a
-                  href="mailto:info@drpremkumar.in"
+                  href={`mailto:${clinicContact.email}`}
                   className="flex items-start gap-3 text-white/70 hover:text-accent text-sm transition-colors duration-300"
                 >
                   <Mail className="w-5 h-5 mt-0.5 flex-shrink-0 text-accent" />
-                  <span>info@drpremkumar.in</span>
+                  <span>{clinicContact.email}</span>
                 </a>
               </li>
               <li>
                 <a
-                  href="https://maps.app.goo.gl/sBPZeVxRTzBJkcH56"
+                  href={clinicContact.googleMapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-start gap-3 text-white/70 hover:text-accent text-sm transition-colors duration-300 group"
                 >
                   <MapPin className="w-5 h-5 mt-0.5 flex-shrink-0 text-accent group-hover:animate-bounce" />
-                  <span>Attur Layout, Yelahanka, Bangalore (Click for Google Maps)</span>
+                  <span>No. 12, 1st Floor, Attur Main Road, Yelahanka New Town, Bangalore 560064</span>
                 </a>
               </li>
               <li>
                 <div className="flex items-start gap-3 text-white/70 text-sm">
-                  <Clock className="w-5 h-5 mt-0.5 flex-shrink-0" />
+                  <Clock className="w-5 h-5 mt-0.5 flex-shrink-0 text-accent" />
                   <div>
-                    <p>Mon-Fri: 9:00 AM - 8:00 PM</p>
-                    <p>Sat: 10:00 AM - 6:00 PM</p>
-                    <p>Sun: 10:00 AM - 2:00 PM</p>
+                    <p className="font-medium text-white/90">Mon–Sat: 10:00 AM – 9:00 PM</p>
+                    <p className="text-white/70">Sun: 10:00 AM – 6:00 PM (By Appointment)</p>
                   </div>
                 </div>
               </li>
@@ -159,7 +161,7 @@ export function Footer() {
         <div className="mt-16 pt-8 border-t border-white/10">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-white/50 text-sm">
-              © {new Date().getFullYear()} Dr. Prem Kumar. All rights reserved.
+              © {new Date().getFullYear()} Dr. Prem Kumar R. All rights reserved.
             </p>
             <div className="flex items-center gap-6">
               <Link href="/privacy-policy" className="text-white/50 hover:text-white text-sm transition-colors">

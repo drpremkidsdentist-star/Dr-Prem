@@ -5,12 +5,13 @@ import { About } from "@/components/sections/About";
 import { StickyBookingBar } from "@/components/sections/StickyBookingBar";
 
 export const metadata: Metadata = {
-  title: "About | Microscopic Dentist Attur, Yelahanka & Bangalore",
+  title: "About Dr. Prem Kumar R | MDS Pediatric & Microscopic Dentist Bangalore",
   description:
-    "Meet Dr. Prem Kumar — microscopic dentist serving Attur, Yelahanka, Hebbal, Doddaballapur, and families across Bangalore. Philosophy, credentials, patient-first care.",
+    "Meet Dr. Prem Kumar R — MDS Pediatric & Preventive Dentistry (Ramaiah Dental College), formerly Associate Professor at Ramaiah. Precision microscopic dentistry in Attur, Yelahanka, Bangalore.",
   keywords: [
-    "about Dr Prem Kumar",
+    "about Dr Prem Kumar R",
     "microscopic dentist Bangalore",
+    "pediatric dentist Bangalore",
     "dentist Attur Yelahanka",
     "pediatric dentist North Bangalore",
   ],
@@ -31,14 +32,13 @@ export default function AboutPage() {
           </nav>
           <h1 className="text-4xl md:text-5xl font-bold text-primary mb-4">
             About{" "}
-            <span className="font-serif italic text-accent">Dr. Prem Kumar</span>
+            <span className="font-serif italic text-accent">Dr. Prem Kumar R</span>
           </h1>
           <p className="text-lg text-neutral-600 max-w-2xl mb-8">
-            Precision dentistry rooted in compassion — flagship clinic in Attur,
-            Yelahanka, serving Hebbal, Doddaballapur, and families across Bangalore.
+            Pediatric and microscopic dental specialist combining academic excellence with calm, compassionate chair-side care in Attur, Yelahanka New Town.
           </p>
           <Link href="/about/dr-prem-kumar" className="btn-primary inline-flex gap-2">
-            Full biography
+            Full Doctor Profile
             <ArrowRight className="size-5" />
           </Link>
         </div>

@@ -106,9 +106,9 @@ const data: ServicePageData = {
     },
   ],
   relatedCases: [
-    { title: "Gum contouring for a gummy smile", href: "/smile-gallery" },
-    { title: "Laser gum disease therapy", href: "/smile-gallery" },
-    { title: "Frenectomy for infant tongue-tie", href: "/smile-gallery" },
+    { title: "Smile Design & Aesthetics", href: "/services/smile-design" },
+    { title: "Pediatric Frenectomy & Care", href: "/services/pediatric-dentistry" },
+    { title: "Laser & Microscope Technology", href: "/technology" },
   ],
   relatedArticles: [
     { title: "Benefits of laser over traditional surgery", href: "/knowledge-center" },

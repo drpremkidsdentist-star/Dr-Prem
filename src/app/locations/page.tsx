@@ -5,24 +5,22 @@ import { serviceAreas, bangaloreHubKeywords } from "@/lib/serviceAreas";
 import { clinicContact } from "@/lib/siteAssets";
 
 export const metadata: Metadata = {
-  title: "All Dental Service Locations in Bangalore | Dr. Prem Kumar",
+  title: "North Bangalore Dental Service Hubs | Dr. Prem Kumar R",
   description:
-    "Dr. Prem Kumar’s microscopic dental clinic in Attur Layout, Yelahanka — serving Indiranagar, Whitefield, Koramangala, Hebbal, HSR Layout, and families across all 18 major hubs in Bangalore.",
+    "Dr. Prem Kumar R’s microscopic dental clinic on Attur Main Road, Yelahanka — serving Attur, Yelahanka, Hebbal, Sahakara Nagar, Thanisandra, Devanahalli, RT Nagar & Doddaballapur in North Bangalore.",
   keywords: [
     ...bangaloreHubKeywords,
-    "dentist Indiranagar",
-    "dentist Koramangala",
-    "dentist Whitefield",
-    "dentist HSR Layout",
-    "dentist Jayanagar",
+    "dentist Yelahanka",
+    "dentist Hebbal",
+    "dentist Sahakara Nagar",
+    "dentist Thanisandra",
+    "dentist Devanahalli",
   ],
   alternates: { canonical: "/locations" },
 };
 
 const regions = [
   "North",
-  "Central & East",
-  "South & West",
 ] as const;
 
 export default function LocationsHubPage() {
@@ -31,16 +29,16 @@ export default function LocationsHubPage() {
       <section className="bg-[#0A2540] text-white py-16 md:py-24">
         <div className="container-custom max-w-4xl">
           <span className="text-sky-300 text-xs font-semibold uppercase tracking-widest">
-            Hyper-Local SEO · All 18 Bangalore Hubs
+            North Bangalore Service Hubs
           </span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mt-4 mb-4">
-            Dental Clinics & Service Hubs Across Bangalore
+            North Bangalore Dental Service Hubs
           </h1>
           <p className="text-white/80 text-lg leading-relaxed max-w-3xl">
             Our flagship clinic is situated on Attur Main Road in{" "}
-            <strong className="text-white">Attur Layout, Yelahanka</strong>. 
+            <strong className="text-white">Attur Layout, Yelahanka New Town</strong>. 
             We provide dedicated local care pages for patients travelling from across 
-            North, Central, East, South, and West Bangalore for specialized 30× microscopic dentistry and gentle pediatric care.
+            North Bangalore for specialized microscopic dentistry and gentle pediatric care.
           </p>
         </div>
       </section>
@@ -53,7 +51,7 @@ export default function LocationsHubPage() {
               <div className="flex items-center gap-3 mb-6 pb-3 border-b border-neutral-200">
                 <MapPin className="w-5 h-5 text-sky-500" />
                 <h2 className="text-2xl md:text-3xl font-bold text-primary">
-                  {reg} Bangalore Service Hubs ({areasInRegion.length})
+                  North Bangalore Service Hubs ({areasInRegion.length})
                 </h2>
               </div>
 

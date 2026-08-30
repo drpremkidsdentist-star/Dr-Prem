@@ -3,9 +3,9 @@ import Link from "next/link";
 import { ChevronRight, ChevronDown, HelpCircle, BookOpen, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "FAQ | Microscopic Dentist Attur, Yelahanka & Bangalore",
+  title: "FAQ | Microscopic Dentist Attur, Yelahanka & Bangalore | Dr. Prem Kumar R",
   description:
-    "Answers about microscopic dentistry, kids dental visits, root canals, implants, and booking at Dr. Prem Kumar’s Attur–Yelahanka clinic serving Hebbal & Doddaballapur.",
+    "Answers about microscopic dentistry, kids dental visits, root canals, implants, and booking at Dr. Prem Kumar R’s Attur–Yelahanka clinic serving Hebbal & Doddaballapur.",
   alternates: { canonical: "/faq" },
 };
 
@@ -13,13 +13,13 @@ const faqs = [
   {
     question: "What is microscopic dentistry?",
     answer:
-      "Microscopic dentistry uses advanced surgical operating microscopes that provide up to 30x magnification and superior illumination. This allows dentists to see details invisible to the naked eye, enabling more precise diagnoses and treatments with minimal invasiveness.",
+      "Microscopic dentistry uses advanced surgical operating microscopes with high magnification and focused illumination. This allows dentists to see details invisible to the naked eye, enabling more precise diagnoses and treatments with minimal invasiveness.",
     category: "General",
   },
   {
     question: "Is microscopic dentistry more expensive than traditional dentistry?",
     answer:
-      "While microscopic dentistry may have a slightly higher initial cost, it often results in fewer complications, reduced need for retreatment, and long-term cost savings. The precision of microscopic procedures means better outcomes and fewer follow-up visits.",
+      "While microscopic dentistry involves specialized surgical optics, it often results in fewer complications, reduced need for retreatment, and long-term cost savings. The precision of microscopic procedures means better outcomes and fewer follow-up visits.",
     category: "General",
   },
   {
@@ -31,7 +31,7 @@ const faqs = [
   {
     question: "How long does a root canal treatment take?",
     answer:
-      "With microscopic dentistry, most root canal treatments can be completed in 60-90 minutes in a single visit. The precision of the microscope often allows for faster and more accurate treatment compared to traditional methods.",
+      "With microscopic dentistry, most root canal treatments can be completed in 60–90 minutes in a single visit. The precision of the microscope allows for accurate canal location and thorough disinfection.",
     category: "Procedures",
   },
   {
@@ -43,13 +43,13 @@ const faqs = [
   {
     question: "What is the recovery time for dental implants?",
     answer:
-      "Initial healing typically takes 1-2 weeks, with complete osseointegration (fusion with the jawbone) taking 3-6 months. With microscopic precision, healing is often faster and more predictable.",
+      "Initial healing typically takes 1–2 weeks, with complete osseointegration (fusion with the jawbone) taking 3–6 months. With microscopic precision, healing is predictable and comfortable.",
     category: "Procedures",
   },
   {
     question: "How long do dental implants last?",
     answer:
-      "With proper care and maintenance, dental implants can last a lifetime. The implant itself is made of biocompatible titanium that fuses with the jawbone, while the crown typically lasts 10-15 years before needing replacement.",
+      "With proper care and maintenance, dental implants can last a lifetime. The implant itself is made of biocompatible titanium that fuses with the jawbone, while the crown typically lasts 10–15 years before needing replacement.",
     category: "Procedures",
   },
   {

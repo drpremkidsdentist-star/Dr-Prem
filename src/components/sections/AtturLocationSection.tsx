@@ -10,18 +10,18 @@ const bangaloreExpansionLocations = [
     name: "Attur, Yelahanka",
     type: "Primary Flagship Clinic",
     status: "Active & Serving",
-    address: "Attur Layout, Yelahanka, Bangalore, Karnataka 560064",
-    mapsUrl: "https://maps.app.goo.gl/aUognHYwsz8SLEY26",
+    address: "No. 12, 1st Floor, Attur Main Road, Yelahanka New Town, Bangalore, Karnataka 560064",
+    mapsUrl: "https://maps.app.goo.gl/nqJ8g6S8nMkDfprGA",
     href: "/locations/attur",
     phone: "+91 81972 80019",
     isPrimary: true,
   },
   {
-    name: "Yelahanka",
+    name: "Yelahanka New Town",
     type: "Service Area",
     status: "Active & Serving",
-    address: "Yelahanka New Town — clinic at Attur Layout",
-    mapsUrl: "https://maps.app.goo.gl/aUognHYwsz8SLEY26",
+    address: "Yelahanka New Town — clinic at Attur Main Road",
+    mapsUrl: "https://maps.app.goo.gl/nqJ8g6S8nMkDfprGA",
     href: "/locations/yelahanka",
     phone: "+91 81972 80019",
     isPrimary: false,
@@ -30,8 +30,8 @@ const bangaloreExpansionLocations = [
     name: "Hebbal",
     type: "Service Area",
     status: "Active & Serving",
-    address: "Patients from Hebbal / ORR visit Attur clinic",
-    mapsUrl: "https://maps.app.goo.gl/aUognHYwsz8SLEY26",
+    address: "Serving patients across Hebbal & North Bangalore",
+    mapsUrl: "https://maps.app.goo.gl/nqJ8g6S8nMkDfprGA",
     href: "/locations/hebbal",
     phone: "+91 81972 80019",
     isPrimary: false,
@@ -40,8 +40,8 @@ const bangaloreExpansionLocations = [
     name: "Doddaballapur",
     type: "Service Area",
     status: "Active & Serving",
-    address: "Dodballapur / North Bangalore corridor → Attur",
-    mapsUrl: "https://maps.app.goo.gl/aUognHYwsz8SLEY26",
+    address: "Serving Doddaballapur & North Bangalore corridor",
+    mapsUrl: "https://maps.app.goo.gl/nqJ8g6S8nMkDfprGA",
     href: "/locations/dodballapur",
     phone: "+91 81972 80019",
     isPrimary: false,
@@ -67,8 +67,8 @@ export function AtturLocationSection() {
             viewport={{ once: true }}
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20 text-accent text-xs md:text-sm font-semibold mb-4 uppercase tracking-widest"
           >
-            <MapPin className="w-4 h-4 text-accent animate-bounce" />
-            <span>Primary Location & Expansion</span>
+            <MapPin className="w-4 h-4 text-accent" />
+            <span>Primary Clinic Location</span>
           </motion.div>
 
           <motion.h2
@@ -78,7 +78,7 @@ export function AtturLocationSection() {
             transition={{ delay: 0.1 }}
             className="text-4xl md:text-6xl font-extrabold tracking-tight mb-4"
           >
-            Visit Our Flagship Clinic In <span className="font-serif italic text-accent">Attur, Bangalore</span>
+            Visit Our Clinic In <span className="font-serif italic text-accent">Attur, Yelahanka</span>
           </motion.h2>
 
           <motion.p
@@ -88,7 +88,7 @@ export function AtturLocationSection() {
             transition={{ delay: 0.2 }}
             className="text-base md:text-xl text-neutral-300 max-w-2xl leading-relaxed"
           >
-            Conveniently located in Attur, Yelahanka with state-of-the-art microscopic surgical suites. Expanding our high-precision microscopic care across all of Bangalore.
+            Conveniently located on Attur Main Road, Yelahanka New Town with state-of-the-art surgical operating microscope suites. Serving patients across North Bangalore.
           </motion.p>
         </div>
 
@@ -97,7 +97,7 @@ export function AtturLocationSection() {
           {/* Location Tabs List (Left) */}
           <div className="lg:col-span-5 flex flex-col gap-4">
             <h3 className="text-xs font-bold uppercase tracking-wider text-neutral-400 mb-1 px-1">
-              Bangalore Locations
+              Bangalore Locations &amp; Service Areas
             </h3>
             {bangaloreExpansionLocations.map((loc, idx) => (
               <button
@@ -148,11 +148,11 @@ export function AtturLocationSection() {
                   <CheckCircle2 className="w-3.5 h-3.5" />
                   {current.status}
                 </span>
-                <span className="text-xs text-neutral-400">Bangalore Flagship Hub</span>
+                <span className="text-xs text-neutral-400">Bangalore Hub</span>
               </div>
 
               <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">
-                Dr. Prem Kumar Microscopic Dental Care - {current.name}
+                Kumar&apos;s Microscopic Dental Care — {current.name}
               </h3>
 
               <p className="text-sm md:text-base text-neutral-300 mb-6 flex items-start gap-3">
@@ -176,7 +176,8 @@ export function AtturLocationSection() {
                   <Clock className="w-5 h-5 text-accent shrink-0" />
                   <div>
                     <div className="text-xs text-neutral-400">Clinic Hours</div>
-                    <div className="text-xs font-semibold text-white">Mon - Sat: 9:00 AM - 8:00 PM</div>
+                    <div className="text-xs font-semibold text-white">Mon–Sat: 10:00 AM – 9:00 PM</div>
+                    <div className="text-[11px] text-neutral-400">Sun: 10:00 AM – 6:00 PM (By Appt)</div>
                   </div>
                 </div>
               </div>
@@ -192,7 +193,7 @@ export function AtturLocationSection() {
                   className="w-full sm:w-auto btn-primary px-8 py-4 text-sm flex items-center justify-center gap-2 shadow-lg"
                 >
                   <Navigation className="w-4 h-4" />
-                  <span>Open Direct Google Maps Location</span>
+                  <span>Open Google Maps</span>
                   <ExternalLink className="w-4 h-4 ml-1" />
                 </a>
               ) : null}
@@ -201,14 +202,14 @@ export function AtturLocationSection() {
                 href={current.href}
                 className="w-full sm:w-auto px-6 py-4 rounded-full bg-white/10 hover:bg-white/20 text-white font-semibold text-sm transition-all text-center"
               >
-                {current.name} SEO page
+                View {current.name} Info
               </Link>
 
               <Link
                 href="/book-appointment"
                 className="w-full sm:w-auto px-6 py-4 rounded-full bg-white/10 hover:bg-white/20 text-white font-semibold text-sm transition-all text-center"
               >
-                Book Appointment at Attur
+                Book Appointment
               </Link>
             </div>
           </div>

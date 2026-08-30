@@ -14,7 +14,7 @@ export function MicroscopicDentistry() {
     {
       icon: Eye,
       title: "Enhanced Visualization",
-      description: "Operating microscopes provide up to 30x magnification for unparalleled precision.",
+      description: "Operating microscopes provide high-definition magnification for unparalleled clinical precision.",
     },
     {
       icon: Zap,
@@ -84,7 +84,7 @@ export function MicroscopicDentistry() {
           >
             <div className="video-container aspect-video bg-primary rounded-2xl overflow-hidden">
               <video
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover scale-[1.08]"
                 autoPlay
                 muted
                 loop
@@ -107,10 +107,7 @@ export function MicroscopicDentistry() {
             </h3>
             <p className="text-neutral-600 leading-relaxed">
               Microscopic dentistry represents a paradigm shift in dental treatment. Using
-              advanced operating microscopes that provide up to 30x magnification, Dr. Prem
-              Kumar can perform procedures with extraordinary precision. This technology
-              allows for the detection and treatment of issues that would be impossible to
-              identify with the naked eye.
+              advanced surgical operating microscopes, Dr. Prem Kumar R performs procedures with extraordinary precision. This technology allows for the detection and treatment of micro-structural issues that would be impossible to identify with the naked eye.
             </p>
             <div className="space-y-4">
               {benefits.map((benefit, index) => (

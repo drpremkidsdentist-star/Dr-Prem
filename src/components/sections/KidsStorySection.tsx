@@ -45,7 +45,7 @@ export function KidsStorySection() {
             transition={{ delay: 0.2 }}
             className="text-base md:text-xl text-slate-300 max-w-2xl leading-relaxed"
           >
-            Watch how Dr. Prem Kumar makes dental care a joyful, fear-free adventure for children with 30x magnification surgical precision.
+            Watch how Dr. Prem Kumar R makes pediatric dental care a joyful, fear-free adventure for children with surgical microscope precision.
           </motion.p>
         </div>
 
@@ -58,12 +58,12 @@ export function KidsStorySection() {
         >
           <div className="relative aspect-video w-full overflow-hidden bg-slate-950">
             <video
-              className="absolute inset-0 h-full w-full object-cover opacity-70 group-hover:scale-105 transition-transform duration-700"
+              className="absolute inset-0 h-full w-full object-cover scale-[1.08] opacity-70 group-hover:scale-110 transition-transform duration-700"
               muted={isMuted}
               loop
               playsInline
               autoPlay
-              poster={siteImages.teenager}
+              poster={siteImages.kidSmile}
               preload="metadata"
             >
               <source src={siteVideos.kid} type="video/mp4" />
@@ -100,7 +100,7 @@ export function KidsStorySection() {
                 Gentle Microscopic Care for Kids
               </h3>
               <p className="text-sm md:text-base text-slate-300 max-w-md">
-                Experience how 30x magnification eliminates fear, reduces drill sounds, and preserves natural young teeth.
+                Experience how surgical magnification eliminates fear, reduces drill sounds, and preserves natural young teeth.
               </p>
             </div>
           </div>
@@ -123,7 +123,7 @@ export function KidsStorySection() {
                 <Sparkles className="w-6 h-6 text-sky-400" />
               </div>
               <div>
-                <h4 className="font-bold text-white text-base mb-1">30x Visual Magnification</h4>
+                <h4 className="font-bold text-white text-base mb-1">Microscopic Precision</h4>
                 <p className="text-xs md:text-sm text-slate-400 leading-relaxed">
                   Detects micro-cavities before they cause discomfort, protecting baby & permanent teeth.
                 </p>

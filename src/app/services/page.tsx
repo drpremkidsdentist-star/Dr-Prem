@@ -22,46 +22,46 @@ export const metadata: Metadata = {
 
 const services = [
   {
+    href: "/services/pediatric-dentistry",
+    title: "Pediatric Dentistry",
+    desc: "Gentle, fear-free care for children with early microscopic detection by MDS specialist Dr. Prem Kumar R.",
+    image: siteImages.kidSmile,
+  },
+  {
     href: "/services/microscopic-root-canal",
     title: "Microscopic Root Canal",
-    desc: "Single-visit precision RCT with 30× magnification for lasting tooth preservation.",
-    image: siteImages.microscope,
+    desc: "Single-visit precision RCT with surgical microscope optics for lasting tooth preservation.",
+    image: siteImages.services.microscopicRct,
   },
   {
     href: "/services/dental-implants",
     title: "Dental Implants",
-    desc: "Permanent tooth replacement planned with CBCT and microscopic placement.",
-    image: siteImages.youngAdult,
+    desc: "Permanent, natural tooth replacement planned with 3D precision and microscopic placement.",
+    image: siteImages.services.dentalImplants,
   },
   {
     href: "/services/smile-design",
     title: "Smile Design",
-    desc: "Digital smile previews and ultra-thin ceramics for natural aesthetics.",
-    image: siteImages.teenager,
-  },
-  {
-    href: "/services/pediatric-dentistry",
-    title: "Pediatric Dentistry",
-    desc: "Gentle, fear-free care for children with microscopic early detection.",
-    image: siteImages.logo,
-  },
-  {
-    href: "/services/cosmetic-dentistry",
-    title: "Cosmetic Dentistry",
-    desc: "Whitening, veneers, and bonding refined under surgical magnification.",
-    image: siteImages.youngAdult,
+    desc: "Digital smile previews and custom ultra-thin porcelain ceramics for natural aesthetics.",
+    image: siteImages.services.cosmeticDentistry,
   },
   {
     href: "/services/laser-dentistry",
     title: "Laser Dentistry",
-    desc: "Minimally invasive soft-tissue care with faster healing and less discomfort.",
-    image: siteImages.microscope,
+    desc: "Minimally invasive soft-tissue contouring and cavity prep with faster healing and zero bleeding.",
+    image: siteImages.services.laserDentistry,
+  },
+  {
+    href: "/services/cosmetic-dentistry",
+    title: "Cosmetic Dentistry",
+    desc: "Whitening, veneers, and composite bonding refined under surgical magnification.",
+    image: siteImages.services.cosmeticDentistry,
   },
   {
     href: "/services/preventive-care",
     title: "Preventive Care",
-    desc: "Cleanings, checkups, and education to keep every generation smile-ready.",
-    image: siteImages.doctorPortrait,
+    desc: "Ultrasonic cleanings, remineralization, and checkups to protect your natural teeth for life.",
+    image: siteImages.doctorPatientFamily,
   },
 ];
 

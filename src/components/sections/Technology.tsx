@@ -13,38 +13,38 @@ export function Technology() {
     {
       icon: Microscope,
       title: "Surgical Operating Microscope",
-      description: "State-of-the-art Zeiss operating microscope providing up to 30x magnification for microscopic precision in every procedure.",
-      specs: ["30x Magnification", "LED Illumination", "3D Visualization"],
+      description: "Advanced surgical operating microscope providing high-magnification optical resolution for microscopic precision in every procedure.",
+      specs: ["High Magnification", "Coaxial LED Illumination", "3D Optical Visualization"],
     },
     {
       icon: Scan,
       title: "CBCT 3D Imaging",
       description: "Cone Beam CT technology for detailed 3D imaging of teeth, bones, and surrounding structures for precise treatment planning.",
-      specs: ["High Resolution 3D", "Low Radiation", "Instant Results"],
+      specs: ["High Resolution 3D", "Low Radiation", "Instant Diagnostics"],
     },
     {
       icon: Camera,
       title: "Intraoral Digital Camera",
       description: "High-definition intraoral cameras for real-time visualization and patient education during treatments.",
-      specs: ["Full HD Video", "Magnification Up to 100x", "Instant Capture"],
+      specs: ["Full HD Video", "Magnified Patient View", "Instant Diagnostic Capture"],
     },
     {
       icon: Smile,
       title: "Digital Smile Design",
-      description: "Advanced software for designing your perfect smile before treatment begins, ensuring predictable and satisfying results.",
-      specs: ["3D Simulation", "Predictable Results", "Patient Preview"],
+      description: "Advanced software for designing your smile preview before treatment begins, ensuring predictable and satisfying aesthetic results.",
+      specs: ["3D Simulation", "Predictable Results", "Patient Smile Preview"],
     },
     {
       icon: Zap,
       title: "Laser Dentistry",
-      description: "Advanced laser technology for soft tissue procedures, offering faster healing, less bleeding, and improved patient comfort.",
-      specs: ["Soft Tissue Procedures", "Bacterial Reduction", "Faster Healing"],
+      description: "Advanced diode laser technology for soft tissue procedures, offering faster healing, less bleeding, and improved patient comfort.",
+      specs: ["Soft Tissue Procedures", "Bacterial Reduction", "Rapid Tissue Healing"],
     },
     {
       icon: Shield,
       title: "Digital Radiography",
       description: "Digital X-ray technology providing instant, high-quality images with 90% less radiation than traditional X-rays.",
-      specs: ["90% Less Radiation", "Instant Results", "Digital Enhancement"],
+      specs: ["90% Less Radiation", "Instant Results", "Digital Image Enhancement"],
     },
   ];
 
@@ -65,7 +65,7 @@ export function Technology() {
             <span className="font-serif italic text-accent">Transforms</span> Dentistry
           </h2>
           <p className="text-lg text-neutral-600 leading-relaxed">
-            Our clinic is equipped with the latest in dental technology, ensuring every
+            Our clinic is equipped with the latest in dental surgical technology, ensuring every
             procedure is performed with the highest standards of precision and care.
           </p>
         </motion.div>
@@ -89,7 +89,7 @@ export function Technology() {
               <ul className="space-y-2">
                 {tech.specs.map((spec) => (
                   <li key={spec} className="flex items-center gap-2 text-sm text-neutral-500">
-                    <CheckCircle className="w-4 h-4 text-success" />
+                    <CheckCircle className="w-4 h-4 text-emerald-500" />
                     {spec}
                   </li>
                 ))}
@@ -111,14 +111,14 @@ export function Technology() {
                 Experience Microscopic Dentistry in Action
               </h3>
               <p className="text-white/70 leading-relaxed mb-8">
-                See how our advanced technology enables Dr. Prem Kumar to perform procedures
-                with surgical precision. The operating microscope reveals details that traditional
-                methods simply cannot detect.
+                See how our advanced technology enables Dr. Prem Kumar R to perform procedures
+                with surgical precision. The operating microscope reveals micro-structures that traditional
+                naked-eye methods simply cannot detect.
               </p>
               <div className="flex flex-wrap gap-4">
                 <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20">
                   <Shield className="w-5 h-5 text-accent" />
-                  <span className="text-sm">FDA Approved Equipment</span>
+                  <span className="text-sm">CDSCO Approved &amp; CE Certified Equipment</span>
                 </div>
                 <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20">
                   <Zap className="w-5 h-5 text-accent" />
@@ -128,7 +128,7 @@ export function Technology() {
             </div>
             <div className="video-container aspect-video bg-primary-dark rounded-2xl overflow-hidden">
               <video
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover scale-[1.08]"
                 autoPlay
                 muted
                 loop

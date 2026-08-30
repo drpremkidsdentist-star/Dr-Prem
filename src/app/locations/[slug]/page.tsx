@@ -7,17 +7,17 @@ import { LocalBusinessSchema, BreadcrumbSchema, FAQSchema } from "@/lib/schemas"
 import { clinicContact } from "@/lib/siteAssets";
 
 interface PageProps {
-  params: Promise<{ slug: string }>;
+  params: { slug: string };
 }
 
-export async function generateStaticParams() {
+export function generateStaticParams() {
   return serviceAreas.map((area) => ({
     slug: area.slug,
   }));
 }
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { slug } = await params;
+export function generateMetadata({ params }: PageProps): Metadata {
+  const { slug } = params;
   const area = getServiceArea(slug);
   if (!area) return {};
 
@@ -42,8 +42,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
-export default async function LocationSlugPage({ params }: PageProps) {
-  const { slug } = await params;
+export default function LocationSlugPage({ params }: PageProps) {
+  const { slug } = params;
   const area = getServiceArea(slug);
 
   if (!area) {
@@ -84,12 +84,12 @@ export default async function LocationSlugPage({ params }: PageProps) {
 
   const faqSchema = FAQSchema([
     {
-      question: `Is Dr. Prem Kumar's microscopic clinic easily accessible from ${area.name}?`,
-      answer: `Yes, our flagship microscopic clinic in Attur Layout, Yelahanka is conveniently accessible from ${area.name} (${area.travelNote ?? "via express corridor"}). Families visit us for high-precision root canals and pediatric dental care.`,
+      question: `Is Dr. Prem Kumar R's microscopic clinic easily accessible from ${area.name}?`,
+      answer: `Yes, our flagship clinic on Attur Main Road, Yelahanka is conveniently accessible from ${area.name} (${area.travelNote ?? "via main roads"}). Families visit us for high-precision root canals and pediatric dental care.`,
     },
     {
       question: `What treatments are available for patients travelling from ${area.name}?`,
-      answer: `We provide 30× microscopic root canal treatment (single-visit available), gentle pediatric dentistry, CBCT-guided dental implants, digital smile design, and laser treatments.`,
+      answer: `We provide precision microscopic root canal treatment (single-visit available), gentle pediatric dentistry, CBCT-guided dental implants, digital smile design, and laser treatments.`,
     },
     {
       question: `How do I book a consultation from ${area.name}?`,

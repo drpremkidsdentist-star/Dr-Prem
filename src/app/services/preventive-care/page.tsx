@@ -2,10 +2,18 @@ import { Metadata } from "next";
 import { ServicePage, ServicePageData } from "@/components/sections/ServicePage";
 
 export const metadata: Metadata = {
-  title: "Preventive Dental Care Bangalore | Check-ups & Cleanings Dr. Prem Kumar",
+  title: "Teeth Cleaning & Cavity Fillings Bangalore | Preventive Dental Care | Dr. Prem Kumar R",
   description:
-    "Preventive dental care in Bangalore by Dr. Prem Kumar. Routine check-ups, cleanings, and screenings that stop problems before they start and protect your smile for life.",
+    "Routine dental check-ups, walk-in teeth cleaning, painless cavity fillings, tooth sensitivity treatments & gum care in Bangalore by Dr. Prem Kumar R.",
   keywords: [
+    "cavity filling near me",
+    "dentist for fillings near me",
+    "fillings",
+    "walk in teeth cleaning near me",
+    "tooth sensitivity",
+    "tooth appointment",
+    "gum specialist near me",
+    "best periodontist near me",
     "preventive dental care Bangalore",
     "dental check-up Bangalore",
     "teeth cleaning cost Bangalore",
@@ -14,10 +22,10 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     type: "website",
-    title: "Preventive Dental Care Bangalore | Dr. Prem Kumar",
-    description: "Routine check-ups and cleanings that protect your smile for life.",
+    title: "Teeth Cleaning & Cavity Fillings Bangalore | Dr. Prem Kumar R",
+    description: "Routine check-ups, teeth cleaning, and cavity fillings that protect your smile for life in Bangalore.",
     url: "https://www.drpremkumar.in/services/preventive-care",
-    images: [{ url: "/images/og-image.jpg", width: 1200, height: 630, alt: "Preventive Dental Care" }],
+    images: [{ url: "/images/og-image.jpg", width: 1200, height: 630, alt: "Preventive Dental Care Bangalore" }],
   },
   alternates: { canonical: "/services/preventive-care" },
 };
@@ -106,9 +114,9 @@ const data: ServicePageData = {
     },
   ],
   relatedCases: [
-    { title: "Routine cleaning success story", href: "/smile-gallery" },
-    { title: "Gum health restored with maintenance", href: "/smile-gallery" },
-    { title: "Cavity caught early, treated simply", href: "/smile-gallery" },
+    { title: "Pediatric Dentistry & Prevention", href: "/services/pediatric-dentistry" },
+    { title: "Laser Periodontal Therapy", href: "/services/laser-dentistry" },
+    { title: "Microscopic Diagnosis Suite", href: "/technology" },
   ],
   relatedArticles: [
     { title: "How to brush and floss correctly", href: "/knowledge-center" },

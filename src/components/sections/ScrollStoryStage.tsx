@@ -27,7 +27,7 @@ const chapters: Chapter[] = [
     body: "Gentle pediatric dentistry so children leave smiling — not scared.",
     mediaType: "video",
     src: siteVideos.kid,
-    mediaClass: "object-[68%_50%] md:object-center",
+    mediaClass: "object-[68%_50%] md:object-center scale-[1.08]",
   },
   {
     id: "little-patients",
@@ -36,15 +36,16 @@ const chapters: Chapter[] = [
     body: "A calm, kid-friendly journey from the waiting room to a brighter smile.",
     mediaType: "video",
     src: siteVideos.teen,
-    mediaClass: "object-[75%_50%] md:object-center",
+    mediaClass: "object-[75%_50%] md:object-center scale-[1.08]",
   },
   {
     id: "adult",
     eyebrow: "Chapter 03 · Adults",
     title: "Restoration for busy lives",
-    body: "Root canals, implants, and smile design for ages 18–35 — precise and lasting.",
+    body: "Root canals, implants, and smile design for adults — precise and lasting.",
     mediaType: "video",
     src: siteVideos.adult,
+    mediaClass: "scale-[1.08]",
   },
   {
     id: "family",
@@ -58,7 +59,7 @@ const chapters: Chapter[] = [
   {
     id: "clinic-family",
     eyebrow: "Chapter 05 · In the chair",
-    title: "Dr. Prem with your family",
+    title: "Dr. Prem Kumar R with your family",
     body: "A calm pediatric-friendly room where parents feel involved and kids feel safe.",
     mediaType: "image",
     src: siteImages.doctorPatientFamily,
@@ -76,11 +77,12 @@ const chapters: Chapter[] = [
   {
     id: "microscope",
     eyebrow: "Chapter 07 · The microscope",
-    title: "What 30× vision changes",
-    body: "The operating microscope reveals what the eye cannot — cleaner canals, safer implants, finer smiles.",
+    title: "What microscopic vision changes",
+    body: "The surgical operating microscope reveals what the naked eye cannot — cleaner canals, safer implants, finer smiles.",
     mediaType: "video",
     src: siteVideos.microscope,
     poster: siteImages.microscope,
+    mediaClass: "scale-[1.08]",
   },
 ];
 
