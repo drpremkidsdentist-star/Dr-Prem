@@ -40,6 +40,7 @@ export function DentistSchema(data: {
   telephone: string;
   openingHours: string[];
   priceRange: string;
+  hasMap?: string;
   sameAs?: string[];
   areaServed?: string[];
   aggregateRating?: { ratingValue: string; reviewCount: string };
@@ -52,6 +53,7 @@ export function DentistSchema(data: {
     description: data.description,
     image: data.image,
     url: data.url,
+    hasMap: data.hasMap ?? "https://maps.app.goo.gl/nqJ8g6S8nMkDfprGA",
     address: {
       "@type": "PostalAddress",
       streetAddress: data.address.streetAddress,
@@ -704,6 +706,14 @@ export function RootEntityGraphSchema(areaServedList: readonly string[] = []) {
         url: "https://www.drpremkumar.in",
         publisher: {
           "@id": "https://www.drpremkumar.in/#doctor"
+        },
+        potentialAction: {
+          "@type": "SearchAction",
+          target: {
+            "@type": "EntryPoint",
+            urlTemplate: "https://www.drpremkumar.in/search?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
         }
       }
     ]

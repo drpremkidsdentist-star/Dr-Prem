@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
-import { Menu, Phone, Calendar } from "lucide-react";
+import { Menu, Phone, Calendar, Search } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { buttonVariants } from "@/components/ui/button";
@@ -13,6 +13,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { SearchDialog } from "@/components/search/SearchDialog";
 import { clinicContact, whatsappUrl } from "@/lib/siteAssets";
 import { cn } from "@/lib/utils";
 
@@ -64,6 +65,7 @@ export function Header() {
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
   // Light pages need dark header text; home opens on dark slides → translucent until scroll
   const isHome = pathname === "/";
   const solid = !isHome || isScrolled;
@@ -138,6 +140,41 @@ export function Header() {
           </nav>
 
           <div className="flex items-center gap-2 sm:gap-3">
+            {/* Search Trigger (Desktop) */}
+            <button
+              type="button"
+              onClick={() => setSearchOpen(true)}
+              className={cn(
+                "hidden sm:flex items-center gap-2 px-3 py-2 text-xs font-semibold rounded-full border transition-all",
+                solid
+                  ? "border-neutral-200 bg-neutral-100/90 text-neutral-700 hover:text-accent hover:bg-neutral-200/80 hover:border-neutral-300"
+                  : "border-white/20 bg-white/10 text-white hover:bg-white/20"
+              )}
+              aria-label="Search treatments"
+            >
+              <Search className="size-3.5 text-accent" />
+              <span>Search</span>
+              <kbd className="hidden lg:inline-flex text-[10px] font-mono px-1.5 py-0.5 rounded bg-black/10 text-inherit">
+                ⌘K
+              </kbd>
+            </button>
+
+            {/* Search Trigger (Mobile) */}
+            <button
+              type="button"
+              onClick={() => setSearchOpen(true)}
+              className={cn(
+                buttonVariants({ variant: "ghost", size: "icon" }),
+                "sm:hidden min-h-10 min-w-10 rounded-full",
+                solid
+                  ? "text-primary bg-neutral-100 hover:bg-neutral-200"
+                  : "text-white bg-white/15 hover:bg-white/25"
+              )}
+              aria-label="Search treatments"
+            >
+              <Search className="size-4" />
+            </button>
+
             <a
               href={`tel:${clinicContact.phoneTel}`}
               className={cn(
@@ -182,6 +219,24 @@ export function Header() {
                   </SheetTitle>
                   <p className="text-xs text-sky-200/90">Microscopic Dentist · Attur</p>
                 </SheetHeader>
+                <div className="px-4 pt-3 pb-1">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setOpen(false);
+                      setSearchOpen(true);
+                    }}
+                    className="w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl bg-white/10 hover:bg-white/15 text-xs text-sky-200 font-medium transition-colors border border-white/10"
+                  >
+                    <span className="flex items-center gap-2">
+                      <Search className="size-3.5 text-accent" />
+                      Search treatments or symptoms...
+                    </span>
+                    <span className="text-[10px] px-1.5 py-0.5 rounded bg-white/10 font-mono">
+                      ⌘K
+                    </span>
+                  </button>
+                </div>
                 <div className="flex-1 overflow-y-auto overscroll-contain px-3 py-3">
                   {mobileNavGroups.map((group) => (
                     <div key={group.label} className="mb-4">
@@ -247,6 +302,7 @@ export function Header() {
           </div>
         </div>
       </div>
+      <SearchDialog open={searchOpen} onOpenChange={setSearchOpen} />
     </header>
   );
 }
