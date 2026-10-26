@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     title: "All Dental Services | Dr. Prem Kumar Bangalore",
     description:
       "Microscopic root canal, dental implants, smile design, pediatric dentistry, cosmetic & laser dentistry in Attur, Yelahanka, Bangalore.",
-    url: "https://www.drpremkumar.in/services",
+    url: "https://drpremkumar.in/services",
   },
 };
 
@@ -70,10 +70,10 @@ export default function ServicesPage() {
     name: "Dental Services – Dr. Prem Kumar Bangalore",
     description:
       "Full range of microscopic dental services at Dr. Prem Kumar's clinic in Attur, Yelahanka, Bangalore.",
-    url: "https://www.drpremkumar.in/services",
+    url: "https://drpremkumar.in/services",
     itemListElement: services.map((s) => ({
       name: s.title,
-      url: `https://www.drpremkumar.in${s.href}`,
+      url: `https://drpremkumar.in${s.href}`,
     })),
   });
 

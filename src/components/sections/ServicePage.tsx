@@ -189,9 +189,9 @@ function ArrowRightSmall() {
   );
 }
 
-export function ServicePage({ data }: { data: ServicePageData }) {
+export function ServicePage({ data, clinicUrl }: { data: ServicePageData; clinicUrl?: string }) {
   const Icon = serviceIcons[data.iconName] ?? Sparkles;
-  const url = `https://www.drpremkumar.in/services/${data.slug}`;
+  const url = `https://drpremkumar.in/services/${data.slug}`;
 
   const schemas = [
     {
@@ -262,10 +262,22 @@ export function ServicePage({ data }: { data: ServicePageData }) {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="flex flex-wrap gap-4 mt-10"
             >
-              <Link href="#book-appointment" className="btn-primary text-lg px-10 py-5">
-                Book {data.shortName}
-                <ArrowRightSmall />
-              </Link>
+              {clinicUrl ? (
+                <a
+                  href={clinicUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary text-lg px-10 py-5 inline-flex items-center gap-2"
+                >
+                  Book at the Clinic
+                  <ArrowRightSmall />
+                </a>
+              ) : (
+                <Link href="#book-appointment" className="btn-primary text-lg px-10 py-5">
+                  Book {data.shortName}
+                  <ArrowRightSmall />
+                </Link>
+              )}
               <Link
                 href="#faq"
                 className="inline-flex items-center gap-2 px-8 py-5 bg-white/10 backdrop-blur-sm border border-white/20 text-white font-medium rounded-full hover:bg-white/20 transition-all duration-300"

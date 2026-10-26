@@ -23,6 +23,35 @@ const nextConfig = {
   },
   poweredByHeader: false,
   generateEtags: true,
+  async redirects() {
+    return [
+      {
+        source: "/microscopic-dentistry",
+        destination: "/services/microscopic-root-canal",
+        permanent: true,
+      },
+      {
+        source: "/locations/kogilu",
+        destination: "/locations",
+        permanent: true,
+      },
+      {
+        source: "/locations/kodigehalli",
+        destination: "/locations",
+        permanent: true,
+      },
+      {
+        source: "/locations/devanahalli",
+        destination: "/locations",
+        permanent: true,
+      },
+      {
+        source: "/locations/doddaballapur",
+        destination: "/locations",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

@@ -1,135 +1,117 @@
 import { Metadata } from "next";
+import Script from "next/script";
 import { ServicePage, ServicePageData } from "@/components/sections/ServicePage";
+import { BreadcrumbSchema } from "@/lib/schemas";
 
 export const metadata: Metadata = {
-  title: "Painless Microscopic Root Canal Treatment Bangalore | Dr. Prem Kumar R",
+  title: "Microscopic Root Canal Treatment Bengaluru | Dr. Prem Kumar R",
   description:
-    "Single-visit painless microscopic root canal treatment in Bangalore by Dr. Prem Kumar R. Save natural teeth, scout calcified canals, and treat infected crowned teeth with surgical microscope precision.",
-  keywords: [
-    "root canal",
-    "rootcanal",
-    "microscopic root canal Bangalore",
-    "same day root canal near me",
-    "painless root canal Bangalore",
-    "calcified root canal treatment",
-    "root canal on crowned tooth",
-    "pulp chamber and root canal",
-    "root canal access",
-    "root canal removal near me",
-    "loose crown on root canal tooth",
-    "tooth decay under crown with root canal",
-    "fractured root canal",
-    "avoid root canal",
-    "root canal cost",
-    "single visit root canal",
-    "best root canal specialist Bangalore",
-    "root canal Attur Yelahanka",
-  ],
+    "Microscope-assisted root canal treatment (RCT) by Dr. Prem Kumar R in Bengaluru. Surgical microscope technique, calcified canal scouting, and tooth preservation.",
+  alternates: { canonical: "https://drpremkumar.in/services/microscopic-root-canal" },
   openGraph: {
     type: "website",
-    title: "Painless Microscopic Root Canal Treatment Bangalore | Dr. Prem Kumar R",
-    description: "Save your natural tooth with surgical microscope precision and single-visit comfort.",
-    url: "https://www.drpremkumar.in/services/microscopic-root-canal",
+    title: "Microscopic Root Canal Treatment Bengaluru | Dr. Prem Kumar R",
+    description:
+      "Microscope-assisted root canal treatment by Dr. Prem Kumar R at Kumar's Microscopic Dental Care, Yelahanka New Town.",
+    url: "https://drpremkumar.in/services/microscopic-root-canal",
     images: [{ url: "/images/og-image.jpg", width: 1200, height: 630, alt: "Microscopic Root Canal Treatment" }],
   },
-  alternates: { canonical: "/services/microscopic-root-canal" },
 };
 
 const data: ServicePageData = {
   slug: "microscopic-root-canal",
-  name: "Microscopic Root Canal Treatment",
-  shortName: "Root Canal",
-  heroTagline: "Save your natural tooth with surgical microscope precision and single-visit comfort.",
+  name: "Microscope-Assisted Root Canal Treatment",
+  shortName: "Microscopic RCT",
+  heroTagline: "High-magnification surgical visualization to clean, disinfect, and preserve natural teeth.",
   iconName: "microscope",
   directAnswer:
-    "A microscopic root canal is a procedure that removes infected pulp from inside a tooth using a surgical operating microscope for high-definition visualization. It eliminates pain, saves your natural tooth, and is typically completed in a single 60–90 minute visit under local anesthesia with minimal discomfort.",
+    "Microscope-assisted root canal treatment involves performing endodontic disinfection and shaping under a dental operating microscope with up to 25× magnification and shadowless coaxial illumination. In my clinical practice, this precision allows the identification of extra canals, calcified anatomy, and micro-fractures that are invisible to the unaided eye, helping preserve natural teeth that might otherwise face extraction.",
   expanded: [
-    "A root canal becomes necessary when the soft pulp inside your tooth — containing nerves and blood vessels — becomes infected or inflamed due to deep decay, repeated dental work, cracks, or trauma. Left untreated, the infection can spread and lead to an abscess.",
-    "Microscopic dentistry transforms the procedure. Dr. Prem Kumar R uses a surgical operating microscope providing high-magnification optical clarity and focused illumination, revealing the tiny, curved canal anatomy invisible to the naked eye. This allows for complete cleaning, precise shaping, and three-dimensional sealing of every canal.",
-    "Because the microscopic view is so detailed, the tooth structure removed is minimized and the risk of missing a canal drops dramatically. Most treatments are completed in a single comfortable visit, protecting your natural tooth for the long term.",
+    "A root canal becomes necessary when bacterial invasion reaches the dental pulp — the neurovascular tissue inside the root channels. While conventional root canals rely on tactile feedback or low-magnification loupes, operating under a surgical microscope reveals the complete internal complexity of each canal.",
+    "In treating teeth with calcified channels, acute curvature, or previous treatment complications, microscopic magnification enables conservative access cavity design. By targeting only diseased tissue, I preserve maximum sound dentin, which is critical for the long-term structural integrity of the tooth.",
+    "All microscopic endodontic procedures are conducted under local anesthesia with digital rubber dam isolation, ensuring a sterile, comfortable, and predictable clinical sequence.",
   ],
   whyImportant: [
-    "Eliminates infection and severe tooth pain at its source",
-    "Preserves your natural tooth instead of extracting it",
-    "Prevents spread of infection to surrounding teeth and bone",
-    "Microscopic precision reduces the need for retreatments",
-    "Maintains your natural bite, jawbone, and facial structure",
+    "Preserves natural teeth by eliminating internal pulp infection",
+    "Illuminates extra and calcified canals that conventional methods may miss",
+    "Conserves healthy tooth structure through micro-surgical access",
+    "Enables non-surgical retreatment of previously failing root canals",
+    "Maintains normal chewing function and jawbone volume",
   ],
   benefits: [
-    "Higher success rate thanks to high-magnification optical visualization",
-    "Often completed in a single visit, saving you time",
+    "High-magnification visualization (up to 25×) with shadowless coaxial LED optics",
+    "Reduced risk of missed canals, under-filling, or perforation",
+    "Single-visit completion in suitable clinical cases",
     "Minimal removal of healthy tooth structure",
-    "Less post-procedure discomfort and faster recovery",
-    "Lower chance of missed canals or reinfection",
-    "Natural tooth preserved for years to come",
+    "Conducted at Kumar's Microscopic Dental Care, Yelahanka New Town",
   ],
   whoNeeds: [
-    "Persistent, throbbing, or spontaneous tooth pain",
-    "Sensitivity to hot or cold that lingers after the stimulus",
-    "Darkening or discoloration of a tooth after trauma",
-    "Swollen, tender gums or a pimple-like bump near a tooth",
-    "Deep decay or a cracked tooth exposing the pulp",
-    "A tooth that has had repeated dental procedures",
+    "Patients experiencing lingering pain to hot or cold stimuli",
+    "Teeth diagnosed with deep decay touching the pulp chamber",
+    "Teeth with persistent abscess or swelling at the root tip",
+    "Patients seeking evaluation for a previously treated tooth with persistent discomfort",
+    "Complex canal anatomies, including molars with suspected fourth or fifth canals",
   ],
   risks: [
-    "Mild soreness for a few days, managed with medication",
-    "Rare chance of instrument separation in a curved canal",
-    "Occasional need for a follow-up visit or crown placement",
-    "Tooth may become slightly more brittle and need a crown",
-    "Very rare post-treatment infection requiring retreatment",
+    "Post-operative ligament tenderness for 2–4 days, managed with anti-inflammatory medication",
+    "Severely calcified canals may require specialized micro-ultrasonic negotiation",
+    "Treated teeth require coronal restoration or crown to prevent structural fracture",
   ],
   recovery:
-    "Initial healing takes 1–3 days. Mild tenderness is normal and eases with over-the-counter pain relief. Avoid chewing on the treated side until the final crown is placed, and maintain gentle brushing and flossing. A follow-up crown is usually recommended within 2–4 weeks.",
-  costRange: "₹6,000 – ₹15,000",
-  duration: "60–90 minutes (often single visit)",
+    "Mild tenderness when chewing is normal for 48–72 hours following treatment. Patients can resume routine daily activities immediately, avoiding hard chewing on the treated tooth until the definitive restoration or crown is seated.",
+  costRange: "Clinical fees vary based on canal complexity and tooth location",
+  duration: "60–90 minutes per session",
   doctorInsight:
-    "The operating microscope changes everything. When I can clearly see a canal that is a fraction of a millimeter wide, I can clean it completely and seal it properly. My patients are often relieved that a root canal is far more comfortable than the pain that brought them in.",
-  procedurePreparation: "A diagnostic X-ray or CBCT scan and local anesthesia before the procedure.",
-  procedureFollowup: "A follow-up crown placement is recommended within 2–4 weeks to protect the tooth.",
+    "The dental operating microscope has fundamentally elevated what we can achieve in tooth preservation. When every canal orifice and isthmus is illuminated at 25× magnification, endodontic therapy transforms from guesswork into predictable, micro-surgical precision.",
+  procedurePreparation: "Diagnostic digital radiographs or CBCT evaluation and comprehensive pulp vitality testing.",
+  procedureFollowup: "Coronal crown placement within 2–4 weeks to seal and protect the restored tooth.",
   faqs: [
     {
-      question: "Is a microscopic root canal painful?",
+      question: "How does a microscope improve root canal treatment?",
       answer:
-        "No. The procedure is performed under local anesthesia, so you feel little to no pain during treatment. Most patients report that it is far more comfortable than the toothache that prompted the visit, with only mild tenderness afterward.",
+        "The surgical microscope magnifies the root canal system up to 25 times and projects shadowless light deep into the roots. This makes it possible to locate fine hidden canals, identify micro-cracks, and thoroughly clean anatomical variations.",
     },
     {
-      question: "How is it different from a regular root canal?",
+      question: "Can a root canal be completed in a single visit?",
       answer:
-        "A regular root canal relies on the naked eye or basic loupes, while a microscopic root canal uses a surgical operating microscope for high magnification. This reveals fine anatomy, reduces missed canals, and preserves more healthy tooth structure.",
+        "Yes. In many cases of vital pulp involvement or controlled infection, microscope-assisted root canal treatment can be completed thoroughly in a single 60–90 minute session.",
     },
     {
-      question: "Can it really be done in one visit?",
+      question: "Where are microscopic root canal treatments performed?",
       answer:
-        "In most cases, yes. Microscopic precision allows Dr. Prem Kumar R to clean, shape, and seal the canal in a single 60–90 minute appointment. Complex infections may need a second visit for the best outcome.",
+        "Treatments are performed at Kumar's Microscopic Dental Care, No. 12, 1st Floor, Attur Main Road, Yelahanka New Town, Bengaluru.",
     },
     {
-      question: "Will I need a crown after the root canal?",
+      question: "How can I book a root canal consultation?",
       answer:
-        "In most cases, yes. A treated tooth becomes more brittle over time, and a crown protects it from fracture. The crown is typically placed 2–4 weeks after the procedure once healing is confirmed.",
-    },
-    {
-      question: "How long does a microscopic root canal last?",
-      answer:
-        "With a proper crown and good oral hygiene, a microscopically treated tooth can last decades or a lifetime. The higher precision of the procedure improves long-term success compared to conventional methods.",
-    },
-    {
-      question: "What is the cost of a root canal in Bangalore?",
-      answer:
-        "Microscopic root canal treatment at our clinic ranges from ₹6,000 to ₹15,000 depending on the tooth and complexity. A separate crown typically adds ₹8,000–₹25,000. Exact pricing is confirmed after consultation.",
+        "You can book directly at kumarsdentistry.in/appointments, contact the front desk at +91 81972 80019, or submit a request on drpremkumar.in/book-appointment.",
     },
   ],
   relatedCases: [
-    { title: "Dental Implants & Restoration", href: "/services/dental-implants" },
-    { title: "Surgical Microscope Technology", href: "/technology" },
-    { title: "Micro-Endodontics Mentorship", href: "/education" },
+    { title: "Pediatric & Preventive Dentistry", href: "/services/pediatric-dentistry" },
+    { title: "Clinical Mentorship in Endodontics", href: "/education" },
   ],
   relatedArticles: [
-    { title: "Why microscopic dentistry improves root canal success", href: "/knowledge-center" },
-    { title: "Signs you may need a root canal", href: "/knowledge-center" },
-    { title: "Root canal vs extraction: what to choose", href: "/knowledge-center" },
+    { title: "Microscopic Root Canal Clinical Guide", href: "/knowledge-center/microscopic-root-canal" },
+    { title: "Clinic Treatment: Microscopic Dentistry", href: "https://kumarsdentistry.in/treatments/microscopic-dentistry" },
   ],
 };
 
+const breadcrumbSchema = BreadcrumbSchema([
+  { name: "Home", href: "/" },
+  { name: "Services", href: "/services" },
+  { name: "Microscopic Root Canal", href: "/services/microscopic-root-canal" },
+]);
+
 export default function Page() {
-  return <ServicePage data={data} />;
+  return (
+    <>
+      <Script
+        id="schema-breadcrumb-rct"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <ServicePage data={data} clinicUrl="https://kumarsdentistry.in/treatments/microscopic-dentistry" />
+    </>
+  );
 }

@@ -44,6 +44,10 @@ export function BookAppointment() {
       return;
     }
     setIsSubmitted(true);
+    if (typeof window !== "undefined") {
+      (window as any).dataLayer = (window as any).dataLayer || [];
+      (window as any).dataLayer.push({ event: "appointment_submit", site: "drpremkumar.in" });
+    }
     toast.success("Request received — we'll confirm within 24 hours.");
     const wa = whatsappUrl(
       `Hi, I'd like to book with Dr. Prem Kumar.\nName: ${formState.name}\nPhone: ${formState.phone}\nLocation: ${formState.location}\nConcern: ${formState.service || formState.message || "Consultation"}`

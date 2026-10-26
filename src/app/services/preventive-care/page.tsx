@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     type: "website",
     title: "Teeth Cleaning & Cavity Fillings Bangalore | Dr. Prem Kumar R",
     description: "Routine check-ups, teeth cleaning, and cavity fillings that protect your smile for life in Bangalore.",
-    url: "https://www.drpremkumar.in/services/preventive-care",
+    url: "https://drpremkumar.in/services/preventive-care",
     images: [{ url: "/images/og-image.jpg", width: 1200, height: 630, alt: "Preventive Dental Care Bangalore" }],
   },
   alternates: { canonical: "/services/preventive-care" },

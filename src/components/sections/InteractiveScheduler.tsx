@@ -29,6 +29,10 @@ export function InteractiveScheduler() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitted(true);
+    if (typeof window !== "undefined") {
+      (window as any).dataLayer = (window as any).dataLayer || [];
+      (window as any).dataLayer.push({ event: "appointment_submit", site: "drpremkumar.in" });
+    }
   };
 
   return (

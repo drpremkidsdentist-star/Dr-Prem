@@ -14,6 +14,7 @@ type Chapter = {
   mediaType: "video" | "image";
   src: string;
   poster?: string;
+  alt?: string;
   /** Tailwind object-position classes — phones crop landscape media hard,
       so subjects framed off-center need a custom focal point on mobile. */
   mediaClass?: string;
@@ -51,9 +52,10 @@ const chapters: Chapter[] = [
     id: "family",
     eyebrow: "Chapter 04 · Family",
     title: "Parents and children, together",
-    body: "One trusted clinic for the whole family — warm care under one roof in Attur.",
+    body: "Comprehensive dental care for the whole family under one roof in Attur.",
     mediaType: "image",
     src: siteImages.familyFatherDaughter,
+    alt: "Dr. Prem Kumar R providing family dental care consultation in Yelahanka",
     mediaClass: "object-[70%_50%] md:object-center",
   },
   {
@@ -63,6 +65,7 @@ const chapters: Chapter[] = [
     body: "A calm pediatric-friendly room where parents feel involved and kids feel safe.",
     mediaType: "image",
     src: siteImages.doctorPatientFamily,
+    alt: "Dr. Prem Kumar R using a dental operating microscope with patient in clinic",
     mediaClass: "object-[70%_50%] md:object-center",
   },
   {
@@ -72,6 +75,7 @@ const chapters: Chapter[] = [
     body: "Gentle restorative care and implants — dignity, clarity, and lasting comfort.",
     mediaType: "image",
     src: siteImages.senior,
+    alt: "Dr. Prem Kumar R performing restorative dental treatment for senior patient",
     mediaClass: "object-[70%_50%] md:object-center",
   },
   {
@@ -211,7 +215,7 @@ export function ScrollStoryStage() {
             ) : (
               <Image
                 src={ch.src}
-                alt=""
+                alt={ch.alt || ch.title}
                 fill
                 className={`object-cover ${ch.mediaClass ?? "object-center"}`}
                 sizes="100vw"

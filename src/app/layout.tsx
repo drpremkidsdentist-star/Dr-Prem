@@ -2,20 +2,11 @@ import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import "@/styles/globals.css";
 import { defaultMetadata, pageMetadata } from "@/lib/metadata";
-import {
-  DentistSchema,
-  MedicalBusinessSchema,
-  OrganizationSchema,
-  WebSiteSchema,
-  FAQSchema,
-  RootEntityGraphSchema,
-} from "@/lib/schemas";
-import { areaServedCities } from "@/lib/serviceAreas";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { SmoothScrollProvider } from "@/components/providers/SmoothScrollProvider";
 import { Toaster } from "@/components/ui/sonner";
-import { clinicContact } from "@/lib/siteAssets";
+import { GtmListeners } from "@/components/analytics/GtmListeners";
 
 export const viewport: Viewport = {
   themeColor: "#0A2540",
@@ -34,127 +25,119 @@ export const metadata: Metadata = {
   },
 };
 
-const clinicData = {
-  name: "Kumar's Microscopic Dental Care | Dr. Prem Kumar R",
-  description:
-    "Specialist pediatric & microscopic dental care in Attur Main Road, Yelahanka New Town, Bangalore. Led by Dr. Prem Kumar R, MDS Pediatric & Preventive Dentistry.",
-  image: "https://www.drpremkumar.in/images/dr-prem-kumar.jpg",
-  url: "https://www.drpremkumar.in",
-  telephone: clinicContact.phoneTel,
-  address: {
-    streetAddress: clinicContact.locations.attur.streetAddress,
-    addressLocality: clinicContact.locations.attur.addressLocality,
-    addressRegion: clinicContact.locations.attur.addressRegion,
-    postalCode: clinicContact.locations.attur.postalCode,
-    addressCountry: clinicContact.locations.attur.addressCountry,
-  },
-  geo: clinicContact.locations.attur.geo,
-  openingHours: ["Mo-Sa 10:00-21:00", "Su 10:00-18:00"],
-  priceRange: "₹₹₹",
-  sameAs: [clinicContact.googleMapsUrl],
-  areaServed: areaServedCities as unknown as string[],
-  aggregateRating: {
-    ratingValue: clinicContact.googleRating,
-    reviewCount: "250",
-  },
+const sitewideJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["Physician", "Person"],
+      "@id": "https://drpremkumar.in/#doctor",
+      "name": "Dr. Prem Kumar R",
+      "honorificSuffix": "BDS, MDS",
+      "jobTitle": "Pediatric & Preventive Dentist",
+      "medicalSpecialty": ["Pediatric", "Dentistry"],
+      "url": "https://drpremkumar.in/",
+      "image": "https://drpremkumar.in/TO_FILL_doctor-photo.jpg",
+      "telephone": "+918197280019",
+      "alumniOf": [
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Rajiv Gandhi University of Health Sciences",
+        },
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Ramaiah University of Applied Sciences",
+        },
+      ],
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "Registration",
+        "recognizedBy": {
+          "@type": "Organization",
+          "name": "Karnataka State Dental Council",
+        },
+        "identifier": "47094 A",
+      },
+      "knowsAbout": [
+        "Pediatric dentistry",
+        "Microscopic root canal treatment",
+        "Endodontics",
+        "Behaviour guidance for children",
+      ],
+      "worksFor": {
+        "@id": "https://kumarsdentistry.in/#clinic",
+      },
+      "sameAs": [
+        "https://kumarsdentistry.in/doctors/dr-prem-kumar",
+        "TO_FILL_practo_profile_url",
+        "TO_FILL_lybrate_profile_url",
+        "TO_FILL_linkedin_url",
+      ],
+    },
+    {
+      "@type": ["Dentist", "MedicalClinic"],
+      "@id": "https://kumarsdentistry.in/#clinic",
+      "name": "Kumar's Microscopic Dental Care",
+      "url": "https://kumarsdentistry.in/",
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://drpremkumar.in/#website",
+      "url": "https://drpremkumar.in/",
+      "name": "Dr. Prem Kumar R",
+      "about": {
+        "@id": "https://drpremkumar.in/#doctor",
+      },
+    },
+  ],
 };
-
-const faqs = [
-  {
-    question: "What is microscopic dentistry?",
-    answer:
-      "Microscopic dentistry uses advanced surgical operating microscopes to perform dental procedures with extreme precision. This allows for high-definition visualization, accurate micro-treatments, minimal invasiveness, and superior patient outcomes compared to traditional naked-eye dentistry.",
-  },
-  {
-    question: "Is microscopic dentistry more expensive than traditional dentistry?",
-    answer:
-      "While microscopic dentistry involves specialized surgical optics, it often results in fewer complications, long-term tooth preservation, and less need for retreatment, providing excellent long-term clinical value.",
-  },
-  {
-    question: "What age should children start visiting the dentist?",
-    answer:
-      "Children should visit the dentist by their first birthday or within six months of their first tooth appearing. Dr. Prem Kumar R provides gentle, fear-free pediatric consultations to ensure healthy dental development.",
-  },
-  {
-    question: "How long does a root canal treatment take with Dr. Prem Kumar R?",
-    answer:
-      "With microscopic dentistry, most root canal treatments can be completed smoothly in 60–90 minutes, often in a single visit. The precision of the dental operating microscope allows for accurate canal location and disinfection.",
-  },
-  {
-    question: "Are dental implants painful?",
-    answer:
-      "Dental implant procedures are performed under local anesthesia and are generally well-tolerated. Post-operative discomfort is minimal and manageable with standard care.",
-  },
-  {
-    question: "Where is Dr. Prem Kumar R's dental clinic located?",
-    answer:
-      "The clinic is located at No. 12, 1st Floor, Attur Main Road, Yelahanka New Town, Bangalore – 560064, serving patients across North Bangalore and Bengaluru. Call +91 81972 80019 to book.",
-  },
-  {
-    question: "What services does Dr. Prem Kumar R offer?",
-    answer:
-      "We offer comprehensive dental services including pediatric dentistry, microscopic root canal treatment (RCT), dental implants, cosmetic smile design, laser dentistry, and preventive care — all performed with microscopic precision.",
-  },
-  {
-    question: "Is laser dentistry safe for children?",
-    answer:
-      "Yes, soft-tissue laser dentistry is safe, minimally invasive, and often preferred for children as it reduces discomfort, bleeding, and healing time compared to conventional surgical instruments.",
-  },
-];
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const jsonLdSchemas = [
-    RootEntityGraphSchema(areaServedCities),
-    DentistSchema(clinicData),
-    MedicalBusinessSchema(clinicData),
-    OrganizationSchema({
-      name: "Dr. Prem Kumar Dental Clinic",
-      description: clinicData.description,
-      url: clinicData.url,
-      logo: "https://www.drpremkumar.in/logo.png",
-      image: clinicData.image,
-      address: clinicData.address,
-      contactPoint: [
-        { telephone: clinicData.telephone, contactType: "Appointment Booking" },
-      ],
-      sameAs: clinicData.sameAs,
-      aggregateRating: clinicData.aggregateRating,
-    }),
-    WebSiteSchema({
-      name: "Dr. Prem Kumar - Microscopic Dentist Bangalore",
-      url: clinicData.url,
-      description: clinicData.description,
-      publisher: "Dr. Prem Kumar",
-    }),
-    FAQSchema(faqs),
-  ];
-
   return (
     <html lang="en-IN" className="font-sans">
       <head>
-        {/* Geo meta tags — Indian local SEO signals */}
+        {/* Geo meta tags */}
         <meta name="geo.region" content="IN-KA" />
         <meta name="geo.placename" content="Bangalore, Karnataka, India" />
         <meta name="geo.position" content="13.1016;77.5702" />
         <meta name="ICBM" content="13.1016, 77.5702" />
         <link rel="manifest" href="/manifest.json" />
-        {/* JSON-LD Structured Data */}
-        {jsonLdSchemas.map((schema, index) => (
-          <Script
-            key={index}
-            id={`schema-${index}`}
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify(schema),
-            }}
-          />
-        ))}
+
+        {/* Google Tag Manager */}
+        <Script
+          id="gtm-script"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TZLXF39X');`,
+          }}
+        />
+
+        {/* Sitewide JSON-LD (Server-rendered, no aggregateRating/reviews) */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(sitewideJsonLd),
+          }}
+        />
       </head>
       <body className="font-sans antialiased">
+        {/* GTM noscript iframe right after body */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-TZLXF39X"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
+        <GtmListeners />
         <SmoothScrollProvider>
           <Header />
           <main id="main-content" className="relative">

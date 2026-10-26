@@ -32,7 +32,7 @@ const structuredDoctorSchema = {
   "@graph": [
     {
       "@type": ["Person", "Physician"],
-      "@id": "https://www.drpremkumar.in/about/dr-prem-kumar#doctor",
+      "@id": "https://drpremkumar.in/about/dr-prem-kumar#doctor",
       name: "Dr. Prem Kumar R",
       givenName: "Prem Kumar",
       familyName: "R",
@@ -40,8 +40,8 @@ const structuredDoctorSchema = {
       jobTitle: "MDS Pediatric & Preventive Dentist | Microscopic Dentistry Specialist",
       description:
         "Bangalore's specialist pediatric & microscopic dentist with 6+ years of clinical experience, former academic faculty at M.S. Ramaiah Dental College & Hospital, specializing in painless single-visit root canals and fear-free kids dental care.",
-      image: "https://www.drpremkumar.in/images/dr-prem-portrait.png",
-      url: "https://www.drpremkumar.in/about/dr-prem-kumar",
+      image: "https://drpremkumar.in/images/dr-prem-portrait.png",
+      url: "https://drpremkumar.in/about/dr-prem-kumar",
       telephone: clinicContact.phoneTel,
       alumniOf: {
         "@type": "EducationalOrganization",
@@ -76,9 +76,9 @@ const structuredDoctorSchema = {
       ],
       worksFor: {
         "@type": ["Dentist", "MedicalBusiness"],
-        "@id": "https://www.drpremkumar.in/#clinic",
+        "@id": "https://drpremkumar.in/#clinic",
         name: "Kumar's Microscopic Dental Care | Dr. Prem Kumar R",
-        url: "https://www.drpremkumar.in",
+        url: "https://drpremkumar.in",
         hasMap: clinicContact.googleMapsUrl,
         telephone: clinicContact.phoneTel,
         address: {

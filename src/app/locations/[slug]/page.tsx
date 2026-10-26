@@ -1,41 +1,55 @@
 import { Metadata } from "next";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import Script from "next/script";
 import { ServiceAreaView } from "@/components/locations/ServiceAreaView";
 import { getServiceArea, serviceAreas } from "@/lib/serviceAreas";
-import { LocalBusinessSchema, BreadcrumbSchema, FAQSchema } from "@/lib/schemas";
-import { clinicContact } from "@/lib/siteAssets";
+import { BreadcrumbSchema } from "@/lib/schemas";
 
 interface PageProps {
   params: { slug: string };
 }
 
+const clinicLocationMap: Record<string, string> = {
+  attur: "https://kumarsdentistry.in/locations/attur",
+  yelahanka: "https://kumarsdentistry.in/locations/yelahanka",
+  vidyaranyapura: "https://kumarsdentistry.in/locations/vidyaranyapura",
+  jakkur: "https://kumarsdentistry.in/locations/jakkur",
+  hebbal: "https://kumarsdentistry.in/locations/hebbal",
+  thanisandra: "https://kumarsdentistry.in/locations/thanisandra",
+  "rt-nagar": "https://kumarsdentistry.in/locations/rt-nagar",
+  "sahakara-nagar": "https://kumarsdentistry.in/locations/sahakar-nagar",
+};
+
+const redirectedSlugs = ["kogilu", "kodigehalli", "devanahalli", "doddaballapur"];
+
 export function generateStaticParams() {
-  return serviceAreas.map((area) => ({
-    slug: area.slug,
-  }));
+  return serviceAreas
+    .filter((area) => !redirectedSlugs.includes(area.slug))
+    .map((area) => ({ slug: area.slug }));
 }
 
 export function generateMetadata({ params }: PageProps): Metadata {
   const { slug } = params;
+  if (redirectedSlugs.includes(slug)) return {};
   const area = getServiceArea(slug);
   if (!area) return {};
 
+  const canonicalUrl = clinicLocationMap[slug] || `https://drpremkumar.in/locations/${area.slug}`;
+
   return {
-    title: area.title,
-    description: area.description,
-    keywords: area.keywords,
-    alternates: { canonical: `/locations/${area.slug}` },
+    title: `${area.name} Dental Care | Dr. Prem Kumar R, Pediatric & Microscopic Dentist`,
+    description: `Dr. Prem Kumar R provides specialist pediatric dentistry and microscopic root canal care for families from ${area.name} at Kumar's Microscopic Dental Care, Attur Main Road, Yelahanka.`,
+    alternates: { canonical: canonicalUrl },
     openGraph: {
-      title: area.title,
-      description: area.description,
-      url: `https://www.drpremkumar.in/locations/${area.slug}`,
+      title: `${area.name} Dental Care | Dr. Prem Kumar R`,
+      description: `Dr. Prem Kumar R provides specialist pediatric dentistry and microscopic root canal care for families from ${area.name}.`,
+      url: canonicalUrl,
       images: [
         {
           url: "/images/og-image.jpg",
           width: 1200,
           height: 630,
-          alt: `Dr. Prem Kumar Microscopic Dentist – ${area.name}, Bangalore`,
+          alt: `Dr. Prem Kumar Microscopic Dentist – ${area.name}, Bengaluru`,
         },
       ],
     },
@@ -44,37 +58,16 @@ export function generateMetadata({ params }: PageProps): Metadata {
 
 export default function LocationSlugPage({ params }: PageProps) {
   const { slug } = params;
-  const area = getServiceArea(slug);
+  if (redirectedSlugs.includes(slug)) {
+    permanentRedirect("/locations");
+  }
 
+  const area = getServiceArea(slug);
   if (!area) {
     notFound();
   }
 
-  const localBusinessSchema = LocalBusinessSchema({
-    name: area.kind === "flagship"
-      ? "Dr. Prem Kumar — Flagship Microscopic Dental Clinic"
-      : `Dr. Prem Kumar — Microscopic Dentist Serving ${area.name}, Bangalore`,
-    description: area.description,
-    image: "https://www.drpremkumar.in/images/og-image.jpg",
-    url: `https://www.drpremkumar.in/locations/${area.slug}`,
-    telephone: clinicContact.phoneTel,
-    address: {
-      streetAddress: clinicContact.locations.attur.streetAddress,
-      addressLocality: clinicContact.locations.attur.addressLocality,
-      addressRegion: clinicContact.locations.attur.addressRegion,
-      postalCode: clinicContact.locations.attur.postalCode,
-      addressCountry: clinicContact.locations.attur.addressCountry,
-    },
-    geo: clinicContact.locations.attur.geo,
-    openingHours: ["Mo-Fr 09:00-20:00", "Sa 10:00-18:00", "Su 10:00-14:00"],
-    priceRange: "₹₹₹",
-    areaServed: [area.localityLabel, "Yelahanka", "Bangalore", "Bengaluru"],
-    sameAs: [clinicContact.googleMapsUrl],
-    parentOrganization: {
-      name: "Dr. Prem Kumar Dental Clinic",
-      url: "https://www.drpremkumar.in",
-    },
-  });
+  const clinicUrl = clinicLocationMap[slug] || "https://kumarsdentistry.in/locations";
 
   const breadcrumbSchema = BreadcrumbSchema([
     { name: "Home", href: "/" },
@@ -82,39 +75,14 @@ export default function LocationSlugPage({ params }: PageProps) {
     { name: area.name, href: `/locations/${area.slug}` },
   ]);
 
-  const faqSchema = FAQSchema([
-    {
-      question: `Is Dr. Prem Kumar R's microscopic clinic easily accessible from ${area.name}?`,
-      answer: `Yes, our flagship clinic on Attur Main Road, Yelahanka is conveniently accessible from ${area.name} (${area.travelNote ?? "via main roads"}). Families visit us for high-precision root canals and pediatric dental care.`,
-    },
-    {
-      question: `What treatments are available for patients travelling from ${area.name}?`,
-      answer: `We provide precision microscopic root canal treatment (single-visit available), gentle pediatric dentistry, CBCT-guided dental implants, digital smile design, and laser treatments.`,
-    },
-    {
-      question: `How do I book a consultation from ${area.name}?`,
-      answer: `You can book online at drpremkumar.in or call/WhatsApp +91 81972 80019. Same-week appointment slots are reserved for out-of-locality patients.`,
-    },
-  ]);
-
   return (
     <>
-      <Script
-        id={`schema-local-business-${area.slug}`}
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-      />
       <Script
         id={`schema-breadcrumb-${area.slug}`}
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <Script
-        id={`schema-faq-${area.slug}`}
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      <ServiceAreaView area={area} />
+      <ServiceAreaView area={area} clinicUrl={clinicUrl} />
     </>
   );
 }

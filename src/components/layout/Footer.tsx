@@ -63,7 +63,7 @@ export function Footer() {
               </div>
             </Link>
             <p className="text-white/70 text-sm leading-relaxed mb-6 max-w-md">
-              Bangalore&apos;s trusted pediatric &amp; microscopic dental specialist in Attur Main Road, Yelahanka New Town. Combining surgical microscope precision with gentle, fear-free patient care.
+              Pediatric &amp; microscopic dental specialist in Attur Main Road, Yelahanka New Town. Combining surgical microscope precision with gentle patient care.
             </p>
             <div className="flex items-center gap-4">
               {socialLinks.map((social) => (
@@ -114,7 +114,10 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-white">Contact</h3>
+            <h3 className="text-lg font-semibold mb-4 text-white">Contact &amp; Clinic Hours</h3>
+            <address className="not-italic text-white/70 text-sm leading-relaxed mb-4 block">
+              Kumar&apos;s Microscopic Dental Care, No.12, 1st Floor, Attur Main Road, Yelahanka New Town, Bengaluru, Karnataka 560064 · +91 81972 80019 · Front desk +91 80882 66714 · Mon–Sat 10:00 AM–9:00 PM, Sun 10:00 AM–6:00 PM
+            </address>
             <ul className="space-y-4">
               <li>
                 <a

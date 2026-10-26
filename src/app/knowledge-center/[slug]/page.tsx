@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ChevronRight, Clock, Calendar, User, AlertTriangle, ArrowRight, BookOpen } from "lucide-react";
 import Image from "next/image";
+import Script from "next/script";
 
 const articleSlugs = ["microscopic-root-canal", "dental-implant-guide", "pediatric-dental-care"];
 
@@ -140,13 +141,63 @@ export async function generateMetadata({
 }
 
 export default function ArticlePage({ params }: { params: { slug: string } }) {
+  const { slug } = params;
   const article = articleData[params.slug];
 
   if (!article) {
     notFound();
   }
 
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "MedicalWebPage",
+        "@id": `https://drpremkumar.in/knowledge-center/${slug}`,
+        "name": article.title,
+        "description": article.description,
+        "url": `https://drpremkumar.in/knowledge-center/${slug}`,
+        "reviewedBy": {
+          "@id": "https://drpremkumar.in/#doctor"
+        },
+        "lastReviewed": article.date,
+        "author": {
+          "@id": "https://drpremkumar.in/#doctor"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://drpremkumar.in/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Knowledge Center",
+            "item": "https://drpremkumar.in/knowledge-center"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": article.title,
+            "item": `https://drpremkumar.in/knowledge-center/${slug}`
+          }
+        ]
+      }
+    ]
+  };
+
   return (
+    <>
+      <Script
+        id={`schema-article-${slug}`}
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
     <main className="min-h-screen pt-20 bg-white">
       <article className="container-custom py-8 sm:py-10">
         <nav className="flex flex-wrap items-center gap-2 text-sm text-neutral-500 mb-5">
@@ -313,5 +364,6 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
         </div>
       </article>
     </main>
+    </>
   );
 }

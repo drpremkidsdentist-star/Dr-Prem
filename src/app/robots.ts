@@ -6,12 +6,12 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/admin/", "/private/", "/api/"],
-        crawlDelay: 1,
+        disallow: ["/admin/", "/private/", "/api/", "/search"],
       },
       {
         userAgent: [
           "GPTBot",
+          "OAI-SearchBot",
           "ChatGPT-User",
           "PerplexityBot",
           "Google-Extended",
@@ -24,8 +24,7 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
       },
     ],
-    sitemap: "https://www.drpremkumar.in/sitemap.xml",
-    host: "https://www.drpremkumar.in",
+    sitemap: "https://drpremkumar.in/sitemap.xml",
+    host: "https://drpremkumar.in",
   };
 }
-

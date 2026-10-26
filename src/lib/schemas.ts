@@ -310,7 +310,7 @@ export function BreadcrumbSchema(items: { name: string; href: string }[]) {
       "@type": "ListItem",
       position: index + 1,
       name: item.name,
-      item: `https://www.drpremkumar.in${item.href}`,
+      item: `https://drpremkumar.in${item.href}`,
     })),
   };
 }
@@ -596,12 +596,12 @@ export function RootEntityGraphSchema(areaServedList: readonly string[] = []) {
     "@graph": [
       {
         "@type": "Person",
-        "@id": "https://www.drpremkumar.in/#doctor",
+        "@id": "https://drpremkumar.in/#doctor",
         name: "Dr. Prem Kumar R",
         jobTitle: "MDS Pediatric & Microscopic Dentist",
         description: "Bangalore's specialist pediatric & microscopic dentist with 6+ years of clinical excellence and former academic faculty at M.S. Ramaiah Dental College, specializing in precision root canals, gentle kids dentistry, and dental implants.",
-        image: "https://www.drpremkumar.in/images/dr-prem-portrait.png",
-        url: "https://www.drpremkumar.in/about/dr-prem-kumar",
+        image: "https://drpremkumar.in/images/dr-prem-portrait.png",
+        url: "https://drpremkumar.in/about/dr-prem-kumar",
         alumniOf: {
           "@type": "EducationalOrganization",
           name: "M.S. Ramaiah Dental College & Hospital, Bangalore"
@@ -635,16 +635,16 @@ export function RootEntityGraphSchema(areaServedList: readonly string[] = []) {
         ],
         worksFor: {
           "@type": "MedicalBusiness",
-          "@id": "https://www.drpremkumar.in/#clinic"
+          "@id": "https://drpremkumar.in/#clinic"
         }
       },
       {
         "@type": ["Dentist", "MedicalBusiness"],
-        "@id": "https://www.drpremkumar.in/#clinic",
+        "@id": "https://drpremkumar.in/#clinic",
         name: "Kumar's Microscopic Dental Care | Dr. Prem Kumar R",
-        url: "https://www.drpremkumar.in",
+        url: "https://drpremkumar.in",
         telephone: "+91-8197280019",
-        image: "https://www.drpremkumar.in/images/og-image.jpg",
+        image: "https://drpremkumar.in/images/og-image.jpg",
         hasMap: "https://maps.app.goo.gl/nqJ8g6S8nMkDfprGA",
         isAcceptingNewPatients: true,
         paymentAccepted: ["Cash", "Credit Card", "Debit Card", "UPI", "Google Pay", "PhonePe", "Net Banking"],
@@ -688,30 +688,30 @@ export function RootEntityGraphSchema(areaServedList: readonly string[] = []) {
       },
       {
         "@type": "MedicalProcedure",
-        "@id": "https://www.drpremkumar.in/#rct",
+        "@id": "https://drpremkumar.in/#rct",
         name: "Microscopic Root Canal Treatment",
         description: "Painless single-visit root canal treatment using advanced surgical operating microscopes.",
         howPerformed: "Pulp extirpation, microscopic magnification illumination, deep canal disinfection, micro-gutta-percha obturation."
       },
       {
         "@type": "MedicalProcedure",
-        "@id": "https://www.drpremkumar.in/#pediatric",
+        "@id": "https://drpremkumar.in/#pediatric",
         name: "Specialist Pediatric Dentistry",
         description: "Fear-free, pain-free dental treatments, child behavior guidance, and preventative oral care tailored for children and toddlers."
       },
       {
         "@type": "WebSite",
-        "@id": "https://www.drpremkumar.in/#website",
+        "@id": "https://drpremkumar.in/#website",
         name: "Dr. Prem Kumar R — Microscopic & Pediatric Dentist Bangalore",
-        url: "https://www.drpremkumar.in",
+        url: "https://drpremkumar.in",
         publisher: {
-          "@id": "https://www.drpremkumar.in/#doctor"
+          "@id": "https://drpremkumar.in/#doctor"
         },
         potentialAction: {
           "@type": "SearchAction",
           target: {
             "@type": "EntryPoint",
-            urlTemplate: "https://www.drpremkumar.in/search?q={search_term_string}"
+            urlTemplate: "https://drpremkumar.in/search?q={search_term_string}"
           },
           "query-input": "required name=search_term_string"
         }

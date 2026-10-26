@@ -185,16 +185,16 @@ export function Header() {
               <Phone className="text-accent size-4 shrink-0" />
               <span className="hidden md:inline">{clinicContact.phoneDisplay}</span>
             </a>
-            <Link
-              href="/book-appointment"
+            <a
+              href="https://kumarsdentistry.in/appointments?utm_source=drpremkumar&utm_medium=referral"
               className={cn(
                 buttonVariants(),
                 "hidden sm:inline-flex rounded-full px-4 md:px-5 min-h-10"
               )}
             >
               <Calendar className="size-4" />
-              Book Now
-            </Link>
+              Book at the clinic
+            </a>
 
             <Sheet open={open} onOpenChange={setOpen}>
               <SheetTrigger
@@ -285,8 +285,8 @@ export function Header() {
                   >
                     WhatsApp
                   </a>
-                  <Link
-                    href="/book-appointment"
+                  <a
+                    href="https://kumarsdentistry.in/appointments?utm_source=drpremkumar&utm_medium=referral"
                     onClick={() => setOpen(false)}
                     className={cn(
                       buttonVariants(),
@@ -294,8 +294,8 @@ export function Header() {
                     )}
                   >
                     <Calendar className="size-4" />
-                    Book Appointment
-                  </Link>
+                    Book at the clinic
+                  </a>
                 </div>
               </SheetContent>
             </Sheet>
